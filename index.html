@@ -3,133 +3,307 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Barra de Abogados del Valle de Tizayuca</title>
+
+<title>Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0b0f1a;
-        color: white;
-    }
 
-    header {
-        background: linear-gradient(90deg, #0b1f3a, #000000);
-        padding: 30px;
-        text-align: center;
-        border-bottom: 3px solid gold;
-    }
+:root{
+--azul:#0B1F3A;
+--dorado:#C9A227;
+--negro:#111111;
+--blanco:#FFFFFF;
+}
 
-    .logo {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        background: gold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 10px;
-        font-weight: bold;
-        color: black;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    h1 {
-        margin: 10px 0;
-        color: gold;
-    }
+body{
+font-family:Arial, sans-serif;
+background:#f5f5f5;
+color:#222;
+line-height:1.6;
+}
 
-    section {
-        padding: 20px;
-    }
+header{
+background:var(--azul);
+padding:15px;
+position:sticky;
+top:0;
+z-index:1000;
+}
 
-    .card {
-        background: #121a2b;
-        padding: 20px;
-        margin: 15px 0;
-        border-left: 4px solid gold;
-        border-radius: 10px;
-    }
+nav{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
 
-    .btn {
-        background: gold;
-        color: black;
-        padding: 10px 15px;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
 
-    .btn:hover {
-        background: #d4af37;
-    }
+.hero{
+background:linear-gradient(rgba(11,31,58,.95),rgba(11,31,58,.95));
+color:white;
+text-align:center;
+padding:80px 20px;
+}
 
-    .social a {
-        display: inline-block;
-        margin: 8px;
-        color: gold;
-        text-decoration: none;
-        font-weight: bold;
-    }
+.hero img{
+width:250px;
+max-width:90%;
+margin-bottom:25px;
+}
 
-    footer {
-        text-align: center;
-        padding: 20px;
-        border-top: 2px solid gold;
-        background: #05070f;
-        margin-top: 20px;
-        font-size: 14px;
-    }
+.hero h1{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+max-width:800px;
+margin:auto;
+}
+
+section{
+padding:70px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:35px;
+color:var(--azul);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.news{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.news-card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.evento{
+background:white;
+padding:20px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.galeria div{
+height:200px;
+background:#ddd;
+border-radius:15px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,
+textarea{
+padding:15px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+background:var(--dorado);
+border:none;
+padding:15px;
+cursor:pointer;
+font-weight:bold;
+}
+
+footer{
+background:var(--azul);
+color:white;
+text-align:center;
+padding:30px;
+}
+
 </style>
-
 </head>
 
 <body>
 
 <header>
-    <div class="logo">
-        LOGO
-    </div>
-
-    <h1>Barra de Abogados del Valle de Tizayuca</h1>
-    <p>Estado de Hidalgo | Asesoría legal profesional y confiable</p>
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#circulares">Circulares</a>
+<a href="#calendario">Calendario</a>
+<a href="#galeria">Galería</a>
+<a href="#contacto">Contacto</a>
+</nav>
 </header>
 
-<section>
+<section id="inicio" class="hero">
 
-    <div class="card">
-        <h2>📌 Servicios Jurídicos</h2>
-        <ul>
-            <li>Derecho civil</li>
-            <li>Derecho penal</li>
-            <li>Contratos y demandas</li>
-            <li>Asesoría legal empresarial</li>
-        </ul>
-    </div>
+<img src="LOGO BARRA.png" alt="Logo BAVTH">
 
-    <div class="card">
-        <h2>📲 Contacto directo</h2>
-        <p>WhatsApp: 55-0000-0000</p>
-        <p>Correo: contacto@abogados-tizayuca.com</p>
+<h1>
+Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.
+</h1>
 
-        <button class="btn" onclick="window.open('https://wa.me/525500000000')">
-            Escribir por WhatsApp
-        </button>
-    </div>
+<p>
+Comprometidos con la formación jurídica, la legalidad y el fortalecimiento de las instituciones.
+</p>
 
-    <div class="card social">
-        <h2>🌐 Redes sociales</h2>
+</section>
 
-        <a href="https://wa.me/525500000000" target="_blank">WhatsApp</a>
-        <a href="https://instagram.com" target="_blank">Instagram</a>
-    </div>
+<section id="nosotros">
+
+<h2>¿Quiénes Somos?</h2>
+
+<p>
+La Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C., es una asociación civil integrada por profesionales del Derecho comprometidos con el fortalecimiento de la cultura jurídica, la promoción de la legalidad, la defensa del Estado de Derecho y el desarrollo profesional de sus integrantes.
+</p>
+
+<br><br>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚖️ Misión</h3>
+<p>Promover la excelencia profesional, la actualización permanente y la ética jurídica.</p>
+</div>
+
+<div class="card">
+<h3>🏛️ Visión</h3>
+<p>Ser una organización jurídica reconocida por su liderazgo y compromiso social.</p>
+</div>
+
+<div class="card">
+<h3>🤝 Compromiso</h3>
+<p>Impulsar el acceso a la justicia y la cultura de la legalidad.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="circulares">
+
+<h2>Circulares y Avisos</h2>
+
+<div class="news">
+
+<div class="news-card">
+<h3>Tribunal Superior de Justicia del Estado de Hidalgo</h3>
+<p>Próximamente publicaciones, acuerdos y circulares.</p>
+</div>
+
+<div class="news-card">
+<h3>Poder Judicial del Estado de México</h3>
+<p>Próximamente publicaciones, acuerdos y circulares.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="calendario">
+
+<h2>Calendario Jurídico</h2>
+
+<div class="evento">
+<strong>Próximamente</strong>
+<p>Agrega aquí conferencias, cursos y eventos de la Barra.</p>
+</div>
+
+</section>
+
+<section id="galeria">
+
+<h2>Galería</h2>
+
+<div class="galeria">
+<div>Fotografía 1</div>
+<div>Fotografía 2</div>
+<div>Fotografía 3</div>
+<div>Fotografía 4</div>
+</div>
+
+</section>
+
+<section id="contacto">
+
+<h2>Contacto</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre Completo">
+
+<input type="email" placeholder="Correo Electrónico">
+
+<textarea rows="5" placeholder="Escriba su mensaje"></textarea>
+
+<button type="submit">
+Enviar Mensaje
+</button>
+
+</form>
+
+<br>
+
+<p style="text-align:center;">
+barradeabogadostizayuca@gmail.com
+</p>
 
 </section>
 
 <footer>
-    © 2026 Barra de Abogados del Valle de Tizayuca | Todos los derechos reservados
+
+<p>
+Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.
+</p>
+
+<p>
+© Todos los derechos reservados.
+</p>
+
 </footer>
 
 </body>
-</html>
+</html>Rediseño institucional de la página
