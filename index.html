@@ -3,330 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.</title>
-
-<!-- ICONOS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<title>BAVTH Portal Jurídico</title>
 <style>
-
-:root{
---azul:#0B1F3A;
---dorado:#C9A227;
---negro:#111111;
---blanco:#ffffff;
---gris:#f4f4f4;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial, Helvetica, sans-serif;
-background:var(--gris);
-color:#333;
-line-height:1.7;
-}
-
-header{
-background:var(--azul);
-position:sticky;
-top:0;
-z-index:999;
-border-bottom:3px solid var(--dorado);
-}
-
-nav{
-display:flex;
-justify-content:center;
-gap:25px;
-padding:15px;
-flex-wrap:wrap;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-color:var(--dorado);
-}
-
-.hero{
-background:linear-gradient(rgba(11,31,58,.95),rgba(11,31,58,.95));
-color:white;
-text-align:center;
-padding:80px 20px;
-}
-
-.logo{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-background:white;
-padding:10px;
-border:5px solid var(--dorado);
-margin-bottom:20px;
-}
-
-.hero h1{
-color:var(--dorado);
-font-size:2.5rem;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:900px;
-margin:auto;
-font-size:1.1rem;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-background:var(--dorado);
-color:black;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
-
-section{
-padding:80px 10%;
-}
-
-h2{
-text-align:center;
-color:var(--azul);
-margin-bottom:40px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-margin-bottom:20px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-/* ================= THEMIS ================= */
-.themis{
-background:linear-gradient(180deg,#0B1F3A,#123b5d);
-color:white;
-text-align:center;
-padding:70px 20px;
-}
-
-.themis img{
-width:180px;
-height:auto;
-margin-bottom:20px;
-background:white;
-padding:10px;
-border-radius:12px;
-filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.4));
-}
-
-.themis p{
-max-width:900px;
-margin:auto;
-color:#eaeaea;
-}
-
-.themis a{
-display:inline-block;
-margin-top:25px;
-padding:14px 30px;
-background:white;
-color:#0B1F3A;
-text-decoration:none;
-font-weight:bold;
-border-radius:8px;
-}
-
-/* ================= OPCIÓN A ================= */
-.opcionA{
-background:#f4f6f9;
-}
-
-.lista-tribunales{
-max-width:900px;
-margin:auto;
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-
-.lista-tribunales li{
-list-style:none;
-display:flex;
-align-items:center;
-gap:12px;
-margin:18px 0;
-}
-
-.lista-tribunales a{
-color:#0B1F3A;
-font-weight:bold;
-text-decoration:none;
-}
-
-.lista-tribunales i{
-color:#0B1F3A;
-font-size:18px;
-}
-
+body{font-family:Arial,sans-serif;margin:0;background:#f4f4f4}
+header{background:#0B1F3A;color:white;padding:15px;text-align:center}
+nav a{color:white;margin:0 10px;text-decoration:none}
+section{padding:40px}
+.hero{background:#0B1F3A;color:white;text-align:center}
+.logo{max-width:180px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+.card{background:white;padding:20px;border-radius:10px}
+.themis{text-align:center;background:#163d65;color:white}
+.themis img{max-width:220px;background:white;padding:10px;border-radius:10px}
+.cal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px}
+.mes{background:white;padding:10px;border-radius:10px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #ddd;padding:4px;text-align:center}
+.fin{background:#eee}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+.galeria img{width:100%;height:250px;object-fit:cover}
 </style>
 </head>
-
 <body>
-
-<!-- HEADER -->
 <header>
 <nav>
 <a href="#inicio">Inicio</a>
 <a href="#nosotros">Nosotros</a>
-<a href="#circulares">Circulares</a>
-<a href="#themis">Themis</a>
-<a href="#calendario">Calendario</a>
+<a href="#tribunales">Tribunales</a>
+<a href="#calendarios">Calendarios</a>
 <a href="#galeria">Galería</a>
 <a href="#contacto">Contacto</a>
 </nav>
 </header>
 
-<!-- HERO -->
 <section id="inicio" class="hero">
-
-<img src="LOGO%20BARRA.png" class="logo">
-
-<h1>Barra de Abogados del Valle de Tizayuca,<br>Estado de Hidalgo, A.C.</h1>
-
-<p>
-Comprometidos con la formación jurídica, la promoción de la legalidad, la difusión de la justicia y el fortalecimiento del Estado de Derecho.
-</p>
-
-<a href="#nosotros" class="btn">Conócenos</a>
-
+<h1>Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.</h1>
 </section>
 
-<!-- ================= THEMIS (CON IMAGEN) ================= -->
-<section id="themis" class="themis">
-
-<img src="themis.png" alt="Themis">
-
-<p>
-Asociación Civil integrada por profesionales del Derecho que promueve la difusión del ámbito jurídico,
-el acceso a la información legal y la cercanía de la justicia para el público en general.
-</p>
-
-<a href="#opcionA">Opción A: Tribunales de Importancia</a>
-
+<section class="themis">
+<img src="themis.jpg" alt="Themis">
+<p>Difusión jurídica y acceso a la justicia.</p>
 </section>
 
-<!-- ================= OPCIÓN A ================= -->
-<section id="opcionA" class="opcionA">
-
-<h2>Tribunales de Importancia</h2>
-
-<div class="lista-tribunales">
-<ul>
-
-<li>
-<i class="fa-solid fa-scale-balanced"></i>
-<a href="https://www.pjhidalgo.gob.mx/" target="_blank">
-Poder Judicial del Estado de Hidalgo
-</a>
-</li>
-
-<li>
-<i class="fa-solid fa-gavel"></i>
-<a href="https://poderjudicialcdmx.gob.mx/" target="_blank">
-Poder Judicial de la Ciudad de México
-</a>
-</li>
-
-<li>
-<i class="fa-solid fa-building-columns"></i>
-<a href="https://www.pjedomex.gob.mx/vista/1_inicio" target="_blank">
-Poder Judicial del Estado de México
-</a>
-</li>
-
-</ul>
-</div>
-
+<section id="nosotros">
+<h2>¿Quiénes Somos?</h2>
+<div class="card">Asociación civil integrada por profesionales del Derecho.</div>
 </section>
 
-<!-- ================= CALENDARIO ================= -->
-<section id="calendario">
-
-<h2>📅 Calendario Jurídico</h2>
-
-<div class="card">
-<strong>15 de julio de 2026</strong>
-<p>Conferencia jurídica institucional.</p>
-</div>
-
-<div class="card">
-<strong>22 de julio de 2026</strong>
-<p>Sesión ordinaria de la Barra.</p>
-</div>
-
-<div class="card">
-<strong>10 de agosto de 2026</strong>
-<p>Curso de actualización jurídica.</p>
-</div>
-
-</section>
-
-<!-- ================= GALERÍA ================= -->
-<section id="galeria">
-
-<h2>🖼️ Galería Institucional</h2>
-
+<section id="tribunales">
+<h2>Tribunales y Organismos Jurídicos</h2>
 <div class="cards">
+<div class="card"><a href="https://www.pjhidalgo.gob.mx/">Poder Judicial Hidalgo</a></div>
+<div class="card"><a href="https://www.pjedomex.gob.mx/">Poder Judicial Estado de México</a></div>
+<div class="card"><a href="https://poderjudicialcdmx.gob.mx/">Poder Judicial CDMX</a></div>
+<div class="card"><a href="https://www.scjn.gob.mx/">SCJN</a></div>
+<div class="card"><a href="https://www.cjf.gob.mx/">CJF</a></div>
+<div class="card"><a href="https://www.te.gob.mx/">TEPJF</a></div>
+</div>
+</section>
 
+<section id="calendarios">
+<h2>Calendario Anual 2026</h2>
+<div class="cal-grid">
+
+    <div class="mes">
+      <h3>Enero 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+    <div class="mes">
+      <h3>Febrero 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+    <div class="mes">
+      <h3>Marzo 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+    <div class="mes">
+      <h3>Abril 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+    <div class="mes">
+      <h3>Mayo 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+    <div class="mes">
+      <h3>Junio 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+    <div class="mes">
+      <h3>Julio 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+    <div class="mes">
+      <h3>Agosto 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+    <div class="mes">
+      <h3>Septiembre 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+    <div class="mes">
+      <h3>Octubre 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+    <div class="mes">
+      <h3>Noviembre 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+    <div class="mes">
+      <h3>Diciembre 2026</h3>
+      <table>
+        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
+        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
+      </table>
+    </div>
+    
+</div>
+</section>
+
+<section id="galeria">
+<h2>Galería</h2>
+<div class="galeria">
 <img src="650047320_122166650984947773_557821829667716147_n.jpg">
 <img src="WhatsApp Image 2026-04-15 at 6.27.05 PM.jpeg">
 <img src="WhatsApp Image 2026-06-15 at 3.18.11 PM.jpeg">
 <img src="WhatsApp Image 2026-06-15 at 3.22.42 PM.jpeg">
-
 </div>
-
 </section>
 
-<!-- ================= CONTACTO ================= -->
 <section id="contacto">
-
-<h2>✉️ Contacto</h2>
-
-<div class="card">
+<h2>Contacto</h2>
 <p>barradeabogadostizayuca@gmail.com</p>
-</div>
-
 </section>
-
-<!-- FOOTER -->
-<footer style="background:#05070f;color:white;text-align:center;padding:30px;">
-<h3>Barra de Abogados del Valle de Tizayuca</h3>
-<p>© 2026 Todos los derechos reservados.</p>
-</footer>
-
-</body>
-</html>
+</body></html>
