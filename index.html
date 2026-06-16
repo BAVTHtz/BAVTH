@@ -124,12 +124,28 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-/* THEMIS */
+/* ================= THEMIS ================= */
 .themis{
 background:linear-gradient(180deg,#0B1F3A,#123b5d);
 color:white;
 text-align:center;
 padding:70px 20px;
+}
+
+.themis img{
+width:180px;
+height:auto;
+margin-bottom:20px;
+background:white;
+padding:10px;
+border-radius:12px;
+filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.4));
+}
+
+.themis p{
+max-width:900px;
+margin:auto;
+color:#eaeaea;
 }
 
 .themis a{
@@ -143,7 +159,7 @@ font-weight:bold;
 border-radius:8px;
 }
 
-/* OPCION A */
+/* ================= OPCIÓN A ================= */
 .opcionA{
 background:#f4f6f9;
 }
@@ -181,6 +197,7 @@ font-size:18px;
 
 <body>
 
+<!-- HEADER -->
 <header>
 <nav>
 <a href="#inicio">Inicio</a>
@@ -200,16 +217,18 @@ font-size:18px;
 
 <h1>Barra de Abogados del Valle de Tizayuca,<br>Estado de Hidalgo, A.C.</h1>
 
-<p>Comprometidos con la formación jurídica, la promoción de la legalidad, la difusión de la justicia y el fortalecimiento del Estado de Derecho.</p>
+<p>
+Comprometidos con la formación jurídica, la promoción de la legalidad, la difusión de la justicia y el fortalecimiento del Estado de Derecho.
+</p>
 
 <a href="#nosotros" class="btn">Conócenos</a>
 
 </section>
 
-<!-- THEMIS -->
+<!-- ================= THEMIS (CON IMAGEN) ================= -->
 <section id="themis" class="themis">
 
-<h2 style="color:#C9A227;">⚖️ THEMIS – DIFUSIÓN JURÍDICA</h2>
+<img src="themis.png" alt="Themis">
 
 <p>
 Asociación Civil integrada por profesionales del Derecho que promueve la difusión del ámbito jurídico,
@@ -220,7 +239,7 @@ el acceso a la información legal y la cercanía de la justicia para el público
 
 </section>
 
-<!-- OPCION A -->
+<!-- ================= OPCIÓN A ================= -->
 <section id="opcionA" class="opcionA">
 
 <h2>Tribunales de Importancia</h2>
@@ -254,7 +273,7 @@ Poder Judicial del Estado de México
 
 </section>
 
-<!-- CALENDARIO (TU ORIGINAL SIN CAMBIOS) -->
+<!-- ================= CALENDARIO ================= -->
 <section id="calendario">
 
 <h2>📅 Calendario Jurídico</h2>
@@ -276,12 +295,34 @@ Poder Judicial del Estado de México
 
 </section>
 
-<!-- AQUÍ DEJA TU RESTO ORIGINAL IGUAL -->
-<section id="nosotros"></section>
-<section id="circulares"></section>
-<section id="galeria"></section>
-<section id="contacto"></section>
+<!-- ================= GALERÍA ================= -->
+<section id="galeria">
 
+<h2>🖼️ Galería Institucional</h2>
+
+<div class="cards">
+
+<img src="650047320_122166650984947773_557821829667716147_n.jpg">
+<img src="WhatsApp Image 2026-04-15 at 6.27.05 PM.jpeg">
+<img src="WhatsApp Image 2026-06-15 at 3.18.11 PM.jpeg">
+<img src="WhatsApp Image 2026-06-15 at 3.22.42 PM.jpeg">
+
+</div>
+
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section id="contacto">
+
+<h2>✉️ Contacto</h2>
+
+<div class="card">
+<p>barradeabogadostizayuca@gmail.com</p>
+</div>
+
+</section>
+
+<!-- FOOTER -->
 <footer style="background:#05070f;color:white;text-align:center;padding:30px;">
 <h3>Barra de Abogados del Valle de Tizayuca</h3>
 <p>© 2026 Todos los derechos reservados.</p>
