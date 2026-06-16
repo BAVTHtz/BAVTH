@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,8 +16,8 @@
 --azul:#0B1F3A;
 --dorado:#C9A227;
 --negro:#111111;
---blanco:#ffffff;
---gris:#f4f4f4;
+--blanco:#FFFFFF;
+--gris:#F4F4F4;
 }
 
 *{
@@ -53,6 +55,7 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:bold;
+transition:.3s;
 }
 
 nav a:hover{
@@ -60,6 +63,7 @@ color:var(--dorado);
 }
 
 .hero{
+
 background:
 linear-gradient(rgba(11,31,58,.88),
 rgba(11,31,58,.88)),
@@ -71,40 +75,27 @@ background-attachment:fixed;
 
 color:white;
 text-align:center;
-padding:100px 20px;
+padding:120px 20px;
 }
 
 .logo{
-width:250px;
-height:250px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid var(--dorado);
-box-shadow:0 8px 25px rgba(0,0,0,.25);
+width:280px;
+height:280px;
+object-fit:contain;
 margin-bottom:25px;
+filter:drop-shadow(0 8px 20px rgba(0,0,0,.35));
 }
 
 .hero h1{
 color:var(--dorado);
-font-size:2.5rem;
+font-size:2.8rem;
 margin-bottom:20px;
 }
 
-.hero p{
-max-width:900px;
-margin:auto;
-font-size:1.1rem;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-background:var(--dorado);
-color:black;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
+.frase-principal{
+font-size:1.3rem;
 font-weight:bold;
+color:var(--dorado);
 }
 
 section{
@@ -121,14 +112,24 @@ margin-bottom:40px;
 background:white;
 padding:25px;
 border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-margin-bottom:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:var(--dorado);
+color:black;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
 }
 
 .galeria{
@@ -158,12 +159,10 @@ flex-direction:column;
 gap:15px;
 }
 
-input,
-textarea{
+input,textarea{
 padding:15px;
 border:1px solid #ccc;
 border-radius:8px;
-font-size:16px;
 }
 
 button{
@@ -183,7 +182,21 @@ padding:30px;
 border-top:3px solid var(--dorado);
 }
 
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+.logo{
+width:200px;
+height:200px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
@@ -194,6 +207,7 @@ border-top:3px solid var(--dorado);
 
 <a href="#inicio">Inicio</a>
 <a href="#nosotros">Nosotros</a>
+<a href="#circulares">Circulares</a>
 <a href="#tribunales">Tribunales</a>
 <a href="#calendarios">Calendarios</a>
 <a href="#galeria">Galería</a>
@@ -217,8 +231,8 @@ Barra de Abogados del Valle de Tizayuca,<br>
 Estado de Hidalgo, A.C.
 </h1>
 
-<p>
-Comprometidos con la formación jurídica, la promoción de la legalidad, la difusión de la justicia y el fortalecimiento del Estado de Derecho.
+<p class="frase-principal">
+Fortaleciendo la cultura jurídica y el Estado de Derecho.
 </p>
 
 </section>
@@ -251,12 +265,6 @@ Promovemos la actualización permanente de nuestros agremiados mediante cursos, 
 Asimismo, participamos en el análisis de temas de interés público, impulsando propuestas orientadas al fortalecimiento del marco normativo, la mejora de las instituciones y la consolidación de una justicia más eficiente, accesible y transparente.
 </p>
 
-<br>
-
-<p>
-Creemos firmemente que el conocimiento jurídico y el acceso efectivo a la justicia son elementos fundamentales para el desarrollo de una sociedad democrática, participativa y respetuosa de los derechos humanos.
-</p>
-
 </div>
 
 <div class="cards">
@@ -284,7 +292,54 @@ Trabajamos para que el conocimiento jurídico, la cultura de la legalidad y el a
 
 </div>
 
+</section><!-- ================= CIRCULARES ================= -->
+
+<section id="circulares">
+
+<h2>📢 Circulares y Avisos</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>⚖️ Tribunal Superior de Justicia del Estado de Hidalgo</h3>
+
+<p>
+Publicación de acuerdos generales, circulares, avisos, suspensiones de labores y calendarios judiciales.
+</p>
+
+<a href="https://www.pjhidalgo.gob.mx/"
+target="_blank"
+class="btn">
+
+Consultar
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🏛️ Poder Judicial del Estado de México</h3>
+
+<p>
+Consulta acuerdos, circulares, avisos institucionales, suspensiones y comunicaciones oficiales.
+</p>
+
+<a href="https://www.pjedomex.gob.mx/vista/1_inicio"
+target="_blank"
+class="btn">
+
+Consultar
+
+</a>
+
+</div>
+
+</div>
+
 </section>
+
 <!-- ================= TRIBUNALES ================= -->
 
 <section id="tribunales">
@@ -296,62 +351,41 @@ Trabajamos para que el conocimiento jurídico, la cultura de la legalidad y el a
 <div class="card">
 <h3>⚖️ Poder Judicial del Estado de Hidalgo</h3>
 
-<p>
-Consulta acuerdos, listas, servicios y trámites judiciales.
-</p>
-
 <a href="https://www.pjhidalgo.gob.mx/"
 target="_blank"
 class="btn">
-
 Ingresar
-
 </a>
 
 </div>
 
 <div class="card">
-
 <h3>🏛️ Poder Judicial del Estado de México</h3>
-
-<p>
-Consulta servicios, acuerdos y calendario oficial.
-</p>
 
 <a href="https://www.pjedomex.gob.mx/vista/1_inicio"
 target="_blank"
 class="btn">
-
 Ingresar
-
 </a>
 
 </div>
 
 <div class="card">
-
 <h3>🏙️ Poder Judicial de la Ciudad de México</h3>
-
-<p>
-Información jurisdiccional, servicios y trámites.
-</p>
 
 <a href="https://poderjudicialcdmx.gob.mx/"
 target="_blank"
 class="btn">
-
 Ingresar
-
 </a>
 
 </div>
 
 <div class="card">
-
 <h3>📚 IUS</h3>
 
 <p>
-Buscador de tesis, jurisprudencias y precedentes judiciales.
+Buscador de tesis y jurisprudencia.
 </p>
 
 <a href="https://sjf2.scjn.gob.mx/busqueda-principal-tesis"
@@ -372,16 +406,16 @@ Consultar IUS
 
 <section id="calendarios">
 
-<h2>📅 Calendarios Judiciales</h2>
+<h2>📅 Calendarios Jurídicos</h2>
 
 <div class="cards">
 
 <div class="card">
 
-<h3>⚖️ Estado de Hidalgo</h3>
+<h3>⚖️ Calendario Judicial Hidalgo</h3>
 
 <p>
-Consulta el calendario oficial del Poder Judicial del Estado de Hidalgo.
+Consulta días inhábiles, acuerdos y calendario oficial.
 </p>
 
 <a href="https://www.pjhidalgo.gob.mx/"
@@ -396,7 +430,7 @@ Consultar
 
 <div class="card">
 
-<h3>🏛️ Estado de México</h3>
+<h3>🏛️ Calendario Judicial Estado de México</h3>
 
 <p>
 Consulta el calendario oficial del Poder Judicial del Estado de México.
@@ -409,6 +443,20 @@ class="btn">
 Consultar
 
 </a>
+
+</div>
+
+<div class="card">
+
+<h3>🎓 Eventos de la Barra</h3>
+
+<p>
+Conferencias, cursos, seminarios, sesiones y actividades académicas.
+</p>
+
+<p>
+Próximamente.
+</p>
 
 </div>
 
@@ -430,7 +478,13 @@ Consultar
 
 <img src="WhatsApp Image 2026-06-15 at 3.18.11 PM.jpeg" alt="Evento">
 
+<img src="WhatsApp Image 2026-06-15 at 3.22.42 PM (1).jpeg" alt="Evento">
+
 <img src="WhatsApp Image 2026-06-15 at 3.22.42 PM.jpeg" alt="Evento">
+
+<img src="WhatsApp Image 2026-06-15 at 3.22.43 PM (1).jpeg" alt="Evento">
+
+<img src="WhatsApp Image 2026-06-15 at 3.22.43 PM (2).jpeg" alt="Evento">
 
 </div>
 
@@ -546,7 +600,7 @@ Estado de Hidalgo, A.C.
 <br>
 
 <p>
-Promoviendo la cultura jurídica, la legalidad y el acceso a la justicia.
+Fortaleciendo la cultura jurídica y el Estado de Derecho.
 </p>
 
 <br>
