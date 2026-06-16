@@ -3,241 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BAVTH Portal Jurídico</title>
+
+<title>Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-body{font-family:Arial,sans-serif;margin:0;background:#f4f4f4}
-header{background:#0B1F3A;color:white;padding:15px;text-align:center}
-nav a{color:white;margin:0 10px;text-decoration:none}
-section{padding:40px}
-.hero{background:#0B1F3A;color:white;text-align:center}
-.logo{max-width:180px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
-.card{background:white;padding:20px;border-radius:10px}
-.themis{text-align:center;background:#163d65;color:white}
-.themis img{max-width:220px;background:white;padding:10px;border-radius:10px}
-.cal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px}
-.mes{background:white;padding:10px;border-radius:10px}
-table{width:100%;border-collapse:collapse}
-th,td{border:1px solid #ddd;padding:4px;text-align:center}
-.fin{background:#eee}
-.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
-.galeria img{width:100%;height:250px;object-fit:cover}
-</style>
-</head>
-<body>
-<header>
-<nav>
-<a href="#inicio">Inicio</a>
-<a href="#nosotros">Nosotros</a>
-<a href="#tribunales">Tribunales</a>
-<a href="#calendarios">Calendarios</a>
-<a href="#galeria">Galería</a>
-<a href="#contacto">Contacto</a>
-</nav><a href="https://sjf2.scjn.gob.mx/busqueda-principal-tesis" target="_blank">
-IUS
-</a>
-</header>
 
-<section id="inicio" class="hero">
-<h1>Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.</h1>
-</section>
+:root{
+--azul:#0B1F3A;
+--dorado:#C9A227;
+--negro:#111111;
+--blanco:#ffffff;
+--gris:#f4f4f4;
+}
 
-<section id="themis" class="themis">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-<img src="themis.jpg"
-alt="Themis"
-class="themis-logo">
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:var(--gris);
+color:#333;
+line-height:1.7;
+}
 
-</section>
-<<section id="nosotros">
+header{
+background:var(--azul);
+position:sticky;
+top:0;
+z-index:999;
+border-bottom:3px solid var(--dorado);
+}
 
-<h2>¿Quiénes Somos?</h2>
+nav{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+padding:15px;
+flex-wrap:wrap;
+}
 
-<div class="card">
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
 
-<p>
-La Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C., es una asociación civil integrada por profesionales del Derecho comprometidos con el fortalecimiento de la cultura jurídica, la promoción de la legalidad, la defensa del Estado de Derecho y el desarrollo profesional de sus integrantes.
-</p>
+nav a:hover{
+color:var(--dorado);
+}
 
-<br>
+.hero{
+background:
+linear-gradient(rgba(11,31,58,.88),
+rgba(11,31,58,.88)),
+url("themis.jpg");
 
-<p>
-Nuestra organización reúne a abogados, juristas y especialistas de diversas ramas del Derecho con el propósito de generar espacios de análisis, colaboración e intercambio de conocimientos que contribuyan al perfeccionamiento de la práctica jurídica y al fortalecimiento de las instituciones.
-</p>
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 
-</div>
+color:white;
+text-align:center;
+padding:100px 20px;
+}
 
-<div class="cards">
+.logo{
+width:250px;
+height:250px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid var(--dorado);
+box-shadow:0 8px 25px rgba(0,0,0,.25);
+margin-bottom:25px;
+}
 
-<div class="card">
-<h3>⚖️ Misión</h3>
-<p>
-Promover la excelencia profesional, la actualización permanente, la ética jurídica y la participación activa de los profesionales del Derecho.
-</p>
-</div>
+.hero h1{
+color:var(--dorado);
+font-size:2.5rem;
+margin-bottom:20px;
+}
 
-<div class="card">
-<h3>🏛️ Visión</h3>
-<p>
-Ser una organización jurídica reconocida por su liderazgo, compromiso social y aportación al fortalecimiento del Estado de Derecho.
-</p>
-</div>
+.hero p{
+max-width:900px;
+margin:auto;
+font-size:1.1rem;
+}
 
-<div class="card">
-<h3>🤝 Compromiso</h3>
-<p>
-Trabajamos para que el conocimiento jurídico y el acceso a la justicia estén al alcance de todas las personas.
-</p>
-</div>
+.btn{
+display:inline-block;
+margin-top:20px;
+background:var(--dorado);
+color:black;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
 
-</div>
+section{
+padding:80px 10%;
+}
 
-</section>
+h2{
+text-align:center;
+color:var(--azul);
+margin-bottom:40px;
+}
 
-<section id="tribunales"><div class="card">
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+margin-bottom:20px;
+}
 
-<h3>📚 IUS - Buscador Jurídico</h3>
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
 
-<p>
-Consulta tesis, jurisprudencia, precedentes y criterios emitidos por los órganos jurisdiccionales.
-</p>
-
-<a href="https://sjf2.scjn.gob.mx/busqueda-principal-tesis"
-target="_blank"
-class="btn">
-
-Consultar IUS
-
-</a>
-
-</div>
-<h2>Tribunales y Organismos Jurídicos</h2>
-<div class="cards">
-<div class="card"><a href="https://www.pjhidalgo.gob.mx/">Poder Judicial Hidalgo</a></div>
-<div class="card"><a href="https://www.pjedomex.gob.mx/">Poder Judicial Estado de México</a></div>
-<div class="card"><a href="https://poderjudicialcdmx.gob.mx/">Poder Judicial CDMX</a></div>
-<div class="card"><a href="https://www.scjn.gob.mx/">SCJN</a></div>
-<div class="card"><a href="https://www.cjf.gob.mx/">CJF</a></div>
-<div class="card"><a href="https://www.te.gob.mx/">TEPJF</a></div>
-</div>
-</section>
-
-<section id="calendarios">
-<h2>Calendario Anual 2026</h2>
-<div class="cal-grid">
-
-    <div class="mes">
-      <h3>Enero 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-    <div class="mes">
-      <h3>Febrero 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-    <div class="mes">
-      <h3>Marzo 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-    <div class="mes">
-      <h3>Abril 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-    <div class="mes">
-      <h3>Mayo 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-    <div class="mes">
-      <h3>Junio 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-    <div class="mes">
-      <h3>Julio 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-    <div class="mes">
-      <h3>Agosto 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-    <div class="mes">
-      <h3>Septiembre 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-    <div class="mes">
-      <h3>Octubre 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-    <div class="mes">
-      <h3>Noviembre 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-    <div class="mes">
-      <h3>Diciembre 2026</h3>
-      <table>
-        <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="fin">6</td><td class="fin">7</td></tr>
-        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="fin">13</td><td class="fin">14</td></tr>
-      </table>
-    </div>
-    
-</div>
-</section>
-
-<.galeria{
+.galeria{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
@@ -256,21 +150,374 @@ transition:.3s;
 transform:scale(1.03);
 }
 
+form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,
+textarea{
+padding:15px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+}
+
+button{
+background:var(--dorado);
+border:none;
+padding:15px;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+background:#05070f;
+color:white;
+text-align:center;
+padding:30px;
+border-top:3px solid var(--dorado);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<a href="#inicio">Inicio</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#tribunales">Tribunales</a>
+<a href="#calendarios">Calendarios</a>
+<a href="#galeria">Galería</a>
+<a href="#redes">Redes</a>
+<a href="#contacto">Contacto</a>
+
+<a href="https://sjf2.scjn.gob.mx/busqueda-principal-tesis" target="_blank">
+IUS
+</a>
+
+</nav>
+
+</header>
+
+<section id="inicio" class="hero">
+
+<img src="LOGO BARRA.png" alt="Logo BAVTH" class="logo">
+
+<h1>
+Barra de Abogados del Valle de Tizayuca,<br>
+Estado de Hidalgo, A.C.
+</h1>
+
+<p>
+Comprometidos con la formación jurídica, la promoción de la legalidad, la difusión de la justicia y el fortalecimiento del Estado de Derecho.
+</p>
+
+</section>
+
+<section id="nosotros">
+
+<h2>⚖️ ¿Quiénes Somos?</h2>
+
+<div class="card">
+
+<p>
+La Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C., es una asociación civil integrada por profesionales del Derecho comprometidos con el fortalecimiento de la cultura jurídica, la promoción de la legalidad, la defensa del Estado de Derecho y el desarrollo profesional de sus integrantes.
+</p>
+
+<br>
+
+<p>
+Nuestra organización reúne a abogados, juristas y especialistas de diversas ramas del Derecho con el propósito de generar espacios de análisis, colaboración e intercambio de conocimientos que contribuyan al perfeccionamiento de la práctica jurídica, al fortalecimiento de las instituciones y a la consolidación de una sociedad más justa y respetuosa de la legalidad.
+</p>
+
+<br>
+
+<p>
+Promovemos la actualización permanente de nuestros agremiados mediante cursos, seminarios, conferencias, actividades académicas y espacios de reflexión jurídica, fomentando siempre el ejercicio ético y profesional de la abogacía.
+</p>
+
+<br>
+
+<p>
+Asimismo, participamos en el análisis de temas de interés público, impulsando propuestas orientadas al fortalecimiento del marco normativo, la mejora de las instituciones y la consolidación de una justicia más eficiente, accesible y transparente.
+</p>
+
+<br>
+
+<p>
+Creemos firmemente que el conocimiento jurídico y el acceso efectivo a la justicia son elementos fundamentales para el desarrollo de una sociedad democrática, participativa y respetuosa de los derechos humanos.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚖️ Nuestra Misión</h3>
+<p>
+Promover la excelencia profesional, la actualización permanente, la ética jurídica y la participación activa de los profesionales del Derecho.
+</p>
+</div>
+
+<div class="card">
+<h3>🏛️ Nuestra Visión</h3>
+<p>
+Ser una organización jurídica reconocida por su liderazgo, compromiso social y aportación al fortalecimiento del Estado de Derecho.
+</p>
+</div>
+
+<div class="card">
+<h3>🤝 Nuestro Compromiso</h3>
+<p>
+Trabajamos para que el conocimiento jurídico, la cultura de la legalidad y el acceso a la justicia sean herramientas al alcance de todas las personas.
+</p>
+</div>
+
+</div>
+
+</section>
+<!-- ================= TRIBUNALES ================= -->
+
+<section id="tribunales">
+
+<h2>🏛️ Tribunales y Organismos Jurídicos</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚖️ Poder Judicial del Estado de Hidalgo</h3>
+
+<p>
+Consulta acuerdos, listas, servicios y trámites judiciales.
+</p>
+
+<a href="https://www.pjhidalgo.gob.mx/"
+target="_blank"
+class="btn">
+
+Ingresar
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🏛️ Poder Judicial del Estado de México</h3>
+
+<p>
+Consulta servicios, acuerdos y calendario oficial.
+</p>
+
+<a href="https://www.pjedomex.gob.mx/vista/1_inicio"
+target="_blank"
+class="btn">
+
+Ingresar
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🏙️ Poder Judicial de la Ciudad de México</h3>
+
+<p>
+Información jurisdiccional, servicios y trámites.
+</p>
+
+<a href="https://poderjudicialcdmx.gob.mx/"
+target="_blank"
+class="btn">
+
+Ingresar
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📚 IUS</h3>
+
+<p>
+Buscador de tesis, jurisprudencias y precedentes judiciales.
+</p>
+
+<a href="https://sjf2.scjn.gob.mx/busqueda-principal-tesis"
+target="_blank"
+class="btn">
+
+Consultar IUS
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CALENDARIOS ================= -->
+
+<section id="calendarios">
+
+<h2>📅 Calendarios Judiciales</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>⚖️ Estado de Hidalgo</h3>
+
+<p>
+Consulta el calendario oficial del Poder Judicial del Estado de Hidalgo.
+</p>
+
+<a href="https://www.pjhidalgo.gob.mx/"
+target="_blank"
+class="btn">
+
+Consultar
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🏛️ Estado de México</h3>
+
+<p>
+Consulta el calendario oficial del Poder Judicial del Estado de México.
+</p>
+
+<a href="https://www.pjedomex.gob.mx/vista/32_horario_y_calendario_oficial"
+target="_blank"
+class="btn">
+
+Consultar
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= GALERÍA ================= -->
+
+<section id="galeria">
+
+<h2>🖼️ Galería Institucional</h2>
+
+<div class="galeria">
+
+<img src="650047320_122166650984947773_557821829667716147_n.jpg" alt="Evento">
+
+<img src="WhatsApp Image 2026-04-15 at 6.27.05 PM.jpeg" alt="Evento">
+
+<img src="WhatsApp Image 2026-06-15 at 3.18.11 PM.jpeg" alt="Evento">
+
+<img src="WhatsApp Image 2026-06-15 at 3.22.42 PM.jpeg" alt="Evento">
+
+</div>
+
+</section>
+
+<!-- ================= REDES ================= -->
+
+<section id="redes">
+
+<h2>🌐 Redes Sociales</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Instagram Oficial</h3>
+
+<p>
+Síguenos para conocer noticias, actividades y eventos jurídicos.
+</p>
+
+<a href="https://www.instagram.com/bavth_2608?igsh=bzlkNXljY3N4OHQ0"
+target="_blank"
+class="btn">
+
+Instagram
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Facebook Oficial</h3>
+
+<p>
+Consulta publicaciones, eventos y fotografías institucionales.
+</p>
+
+<a href="https://www.facebook.com/share/17pQSZRdxd/"
+target="_blank"
+class="btn">
+
+Facebook
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACTO ================= -->
+
 <section id="contacto">
 
 <h2>✉️ Contacto</h2>
 
-<form>
+<div class="card">
 
-<input type="text" placeholder="Nombre Completo">
+<form action="https://formsubmit.co/barradeabogadostizayuca@gmail.com" method="POST">
 
-<input type="email" placeholder="Correo Electrónico">
+<input
+type="text"
+name="nombre"
+placeholder="Nombre Completo"
+required>
 
-<textarea rows="6"
-placeholder="Escriba su mensaje"></textarea>
+<input
+type="email"
+name="correo"
+placeholder="Correo Electrónico"
+required>
+
+<textarea
+name="mensaje"
+rows="6"
+placeholder="Escriba su mensaje"
+required></textarea>
+
+<input type="hidden" name="_captcha" value="false">
 
 <button type="submit">
+
 Enviar Mensaje
+
 </button>
 
 </form>
@@ -278,7 +525,37 @@ Enviar Mensaje
 <br>
 
 <p style="text-align:center;font-weight:bold;">
-barradeabogadostizayuca@gmail.com
+
+📧 barradeabogadostizayuca@gmail.com
+
 </p>
 
+</div>
+
 </section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h3>
+Barra de Abogados del Valle de Tizayuca,
+Estado de Hidalgo, A.C.
+</h3>
+
+<br>
+
+<p>
+Promoviendo la cultura jurídica, la legalidad y el acceso a la justicia.
+</p>
+
+<br>
+
+<p>
+© 2026 Todos los derechos reservados.
+</p>
+
+</footer>
+
+</body>
+</html>
