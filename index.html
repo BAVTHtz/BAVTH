@@ -33,24 +33,84 @@ th,td{border:1px solid #ddd;padding:4px;text-align:center}
 <a href="#calendarios">Calendarios</a>
 <a href="#galeria">Galería</a>
 <a href="#contacto">Contacto</a>
-</nav>
+</nav><a href="https://sjf2.scjn.gob.mx/busqueda-principal-tesis" target="_blank">
+IUS
+</a>
 </header>
 
 <section id="inicio" class="hero">
 <h1>Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.</h1>
 </section>
 
-<section class="themis">
-<img src="themis.jpg" alt="Themis">
-<p>Difusión jurídica y acceso a la justicia.</p>
-</section>
+<section id="themis" class="themis">
 
-<section id="nosotros">
+<img src="themis.jpg"
+alt="Themis"
+class="themis-logo">
+
+</section>
+<<section id="nosotros">
+
 <h2>¿Quiénes Somos?</h2>
-<div class="card">Asociación civil integrada por profesionales del Derecho.</div>
+
+<div class="card">
+
+<p>
+La Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C., es una asociación civil integrada por profesionales del Derecho comprometidos con el fortalecimiento de la cultura jurídica, la promoción de la legalidad, la defensa del Estado de Derecho y el desarrollo profesional de sus integrantes.
+</p>
+
+<br>
+
+<p>
+Nuestra organización reúne a abogados, juristas y especialistas de diversas ramas del Derecho con el propósito de generar espacios de análisis, colaboración e intercambio de conocimientos que contribuyan al perfeccionamiento de la práctica jurídica y al fortalecimiento de las instituciones.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚖️ Misión</h3>
+<p>
+Promover la excelencia profesional, la actualización permanente, la ética jurídica y la participación activa de los profesionales del Derecho.
+</p>
+</div>
+
+<div class="card">
+<h3>🏛️ Visión</h3>
+<p>
+Ser una organización jurídica reconocida por su liderazgo, compromiso social y aportación al fortalecimiento del Estado de Derecho.
+</p>
+</div>
+
+<div class="card">
+<h3>🤝 Compromiso</h3>
+<p>
+Trabajamos para que el conocimiento jurídico y el acceso a la justicia estén al alcance de todas las personas.
+</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="tribunales">
+<section id="tribunales"><div class="card">
+
+<h3>📚 IUS - Buscador Jurídico</h3>
+
+<p>
+Consulta tesis, jurisprudencia, precedentes y criterios emitidos por los órganos jurisdiccionales.
+</p>
+
+<a href="https://sjf2.scjn.gob.mx/busqueda-principal-tesis"
+target="_blank"
+class="btn">
+
+Consultar IUS
+
+</a>
+
+</div>
 <h2>Tribunales y Organismos Jurídicos</h2>
 <div class="cards">
 <div class="card"><a href="https://www.pjhidalgo.gob.mx/">Poder Judicial Hidalgo</a></div>
@@ -177,18 +237,48 @@ th,td{border:1px solid #ddd;padding:4px;text-align:center}
 </div>
 </section>
 
-<section id="galeria">
-<h2>Galería</h2>
-<div class="galeria">
-<img src="650047320_122166650984947773_557821829667716147_n.jpg">
-<img src="WhatsApp Image 2026-04-15 at 6.27.05 PM.jpeg">
-<img src="WhatsApp Image 2026-06-15 at 3.18.11 PM.jpeg">
-<img src="WhatsApp Image 2026-06-15 at 3.22.42 PM.jpeg">
-</div>
-</section>
+<.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.galeria img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.galeria img:hover{
+transform:scale(1.03);
+}
 
 <section id="contacto">
-<h2>Contacto</h2>
-<p>barradeabogadostizayuca@gmail.com</p>
+
+<h2>✉️ Contacto</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre Completo">
+
+<input type="email" placeholder="Correo Electrónico">
+
+<textarea rows="6"
+placeholder="Escriba su mensaje"></textarea>
+
+<button type="submit">
+Enviar Mensaje
+</button>
+
+</form>
+
+<br>
+
+<p style="text-align:center;font-weight:bold;">
+barradeabogadostizayuca@gmail.com
+</p>
+
 </section>
-</body></html>
