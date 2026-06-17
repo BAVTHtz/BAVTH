@@ -8,6 +8,10 @@
 
 <title>Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.</title>
 
+<!-- ICONOS INSTITUCIONALES -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
 
 :root{
@@ -33,6 +37,7 @@ line-height:1.7;
 overflow-x:hidden;
 }
 
+/* HEADER */
 header{
 background:rgba(11,31,58,.95);
 position:sticky;
@@ -48,7 +53,6 @@ justify-content:center;
 gap:25px;
 padding:15px;
 flex-wrap:wrap;
-backdrop-filter:blur(10px);
 }
 
 nav a{
@@ -62,398 +66,103 @@ nav a:hover{
 color:var(--dorado);
 }
 
+/* HERO */
 .hero{
-
 background:
-linear-gradient(
-rgba(11,31,58,.82),
-rgba(11,31,58,.82)
-),
+linear-gradient(rgba(11,31,58,.82),rgba(11,31,58,.82)),
 url("themis.jpg");
-
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-
 min-height:100vh;
-
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-
 text-align:center;
 color:white;
 padding:120px 20px;
 }
 
 .logo{
-
 width:280px;
 height:280px;
-
 object-fit:contain;
-
-background:transparent;
-
-display:block;
-
-margin:0 auto 25px auto;
-
-filter:drop-shadow(
-0 10px 25px rgba(0,0,0,.45)
-);
-
-}
-
-#reloj{
-
+filter:drop-shadow(0 10px 25px rgba(0,0,0,.45));
 margin-bottom:25px;
-
-font-size:1.3rem;
-
-font-weight:bold;
-
-color:var(--dorado);
-
-background:rgba(0,0,0,.35);
-
-padding:12px 25px;
-
-border-radius:50px;
-
-backdrop-filter:blur(5px);
-
 }
 
 .hero h1{
-
-font-size:2.8rem;
-
+font-size:2.5rem;
 color:var(--dorado);
-
-margin-bottom:25px;
-
-max-width:1200px;
-
+max-width:1100px;
 }
 
 .hero p{
-
-font-size:1.15rem;
-
+margin-top:20px;
 max-width:900px;
-
-margin:auto;
-
 }
 
+/* BOTON */
 .btn{
-
 display:inline-block;
-
 margin-top:30px;
-
 padding:14px 30px;
-
-background:var(--dorado);
-
-color:black;
-
+background:linear-gradient(135deg,#C9A227,#e5c65a);
+color:#111;
 font-weight:bold;
-
 text-decoration:none;
-
 border-radius:8px;
-
 transition:.3s;
-
+border:1px solid #b08a18;
 }
 
 .btn:hover{
-
-transform:translateY(-3px);
-
+background:var(--azul);
+color:white;
 }
 
 section{
-
-padding:120px 10%;
-
+padding:100px 10%;
 }
 
+/* TITULOS INSTITUCIONALES */
 h2{
-
 text-align:center;
-
-margin-bottom:45px;
-
 color:var(--azul);
-
 font-size:2rem;
+margin-bottom:60px;
+position:relative;
+}
 
+h2::after{
+content:"";
+width:80px;
+height:3px;
+background:var(--dorado);
+position:absolute;
+bottom:-15px;
+left:50%;
+transform:translateX(-50%);
+}
+
+h2 i{
+color:var(--dorado);
+margin-right:10px;
 }
 
 .card{
-
 background:white;
-
 padding:25px;
-
 border-radius:15px;
-
 box-shadow:0 5px 15px rgba(0,0,0,.08);
-
-transition:.35s;
-
 margin-bottom:20px;
-
-}
-
-.card:hover{
-
-transform:translateY(-6px);
-
-box-shadow:0 15px 35px rgba(0,0,0,.15);
-
 }
 
 .cards{
-
 display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
-
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
-
-}
-
-.evento{
-
-background:white;
-
-padding:25px;
-
-border-radius:15px;
-
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-
-margin-bottom:20px;
-
-}
-
-.social{
-
-text-align:center;
-
-}
-
-.social a{
-
-display:inline-block;
-
-margin:10px;
-
-padding:12px 20px;
-
-background:var(--azul);
-
-color:white;
-
-text-decoration:none;
-
-border-radius:8px;
-
-}
-
-form{
-
-max-width:700px;
-
-margin:auto;
-
-display:flex;
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-input,
-textarea{
-
-padding:15px;
-
-border:1px solid #ccc;
-
-border-radius:8px;
-
-font-size:1rem;
-
-}
-
-button{
-
-background:var(--dorado);
-
-padding:15px;
-
-border:none;
-
-font-weight:bold;
-
-border-radius:8px;
-
-cursor:pointer;
-
-}
-
-.galeria{
-
-position:relative;
-
-max-width:1200px;
-
-margin:auto;
-
-overflow:hidden;
-
-border-radius:20px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-}
-
-.slide{
-
-display:none;
-
-width:100%;
-
-}
-
-/* CAMBIO PARA QUE LAS IMÁGENES NO SE RECORTEN */
-
-.slide img{
-
-width:100%;
-
-height:600px;
-
-object-fit:contain;
-
-background:white;
-
-}
-
-/* NUEVO BLOQUE PARA LAS IMÁGENES DEL CALENDARIO */
-
-.calendario-imagenes{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-.calendario-imagenes img{
-
-width:48%;
-
-border-radius:15px;
-
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-
-object-fit:contain;
-
-}
-
-/* FOOTER MODIFICADO */
-
-footer{
-
-background:#05070f;
-
-color:white;
-
-text-align:center;
-
-padding:40px;
-
-border-top:3px solid var(--dorado);
-
-position:relative;
-
-}
-
-.footer-reloj{
-
-position:absolute;
-
-right:30px;
-
-top:50%;
-
-transform:translateY(-50%);
-
-text-align:right;
-
-}
-
-.footer-reloj #reloj{
-
-margin:0;
-
-padding:0;
-
-background:none;
-
-border-radius:0;
-
-font-size:1rem;
-
-color:var(--dorado);
-
-}/* CONTINUACIÓN DEL BLOQUE <style> */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:1.8rem;
-}
-
-.logo{
-width:180px;
-height:180px;
-}
-
-.slide img{
-height:300px;
-}
-
-section{
-padding:80px 6%;
-}
-
-.calendario-imagenes img{
-width:100%;
-}
-
-.footer-reloj{
-position:static;
-transform:none;
-margin-top:20px;
-text-align:center;
-}
-
 }
 
 </style>
@@ -463,69 +172,46 @@ text-align:center;
 <body>
 
 <header>
-
 <nav>
-
 <a href="#inicio">Inicio</a>
-
 <a href="#nosotros">Nosotros</a>
-
 <a href="#circulares">Circulares</a>
-
 <a href="#calendario">Calendario</a>
-
 <a href="#tribunales">Tribunales</a>
-
 <a href="#galeria">Galería</a>
-
 <a href="#contacto">Contacto</a>
-
 </nav>
-
 </header>
 
 <section id="inicio" class="hero">
 
-<img
-src="LOGO_BARRA-removebg-preview.png"
-alt="Logo BAVTH"
-class="logo">
-
-<!-- RELOJ ELIMINADO DE LA PORTADA -->
+<img src="LOGO_BARRA-removebg-preview.png" class="logo">
 
 <h1>
-
-Barra de Abogados del Valle de Tizayuca,
-Estado de Hidalgo, A.C.
-
+Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.
 </h1>
 
 <p>
-
-Comprometidos con la formación jurídica,
-la difusión de la justicia,
-la promoción de la legalidad
-y el fortalecimiento del Estado de Derecho.
-
+Comprometidos con la formación jurídica y el fortalecimiento del Estado de Derecho.
 </p>
 
 <a href="#nosotros" class="btn">
-
 Conócenos
-
 </a>
 
-</section>
+</section><section id="nosotros">
 
-<section id="nosotros">
+<h2>
+<i class="fas fa-scale-balanced"></i>
+¿Quiénes Somos?
+</h2>
 
-<h2>¿Quiénes Somos?</h2>
 
 <div class="card">
 
 <p>
 
-La Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C., es una asociación civil integrada por profesionales del Derecho comprometidos con el fortalecimiento de la cultura jurídica, la promoción de la legalidad, la defensa del Estado de Derecho y el desarrollo profesional de sus integrantes.
+La Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C., es una asociación civil integrada por profesionales del Derecho comprometidos con el fortalecimiento de la cultura jurídica, la promoción de la legalidad, la defensa del Estado de Derecho y el desarrollo profesional.
 
 </p>
 
@@ -533,104 +219,177 @@ La Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C., es una asoc
 
 <p>
 
-Nuestra organización reúne a abogados, juristas y especialistas de diversas ramas del Derecho, provenientes tanto del sector público como del privado, con el propósito de generar espacios de análisis, colaboración e intercambio de conocimientos que contribuyan al perfeccionamiento de la práctica jurídica, al fortalecimiento de las instituciones y a la consolidación de una sociedad más justa y respetuosa de la legalidad.
+Nuestra organización reúne abogados, juristas y especialistas de diversas ramas del Derecho, generando espacios de análisis, colaboración e intercambio de conocimientos para contribuir al perfeccionamiento de la práctica jurídica y al fortalecimiento de las instituciones.
 
 </p>
 
 </div>
+
 
 <div class="cards">
 
+
 <div class="card">
 
-<h3>⚖️ Misión</h3>
+<h3>
+<i class="fas fa-bullseye"></i>
+Misión
+</h3>
 
 <p>
 
-Promover la excelencia profesional, la actualización permanente, la ética jurídica y la participación activa de los profesionales del Derecho, contribuyendo al fortalecimiento de las instituciones y a la difusión de la cultura jurídica.
+Promover la excelencia profesional, la actualización permanente, la ética jurídica y la participación activa de los profesionales del Derecho.
 
 </p>
 
 </div>
 
+
 <div class="card">
 
-<h3>🏛️ Visión</h3>
+<h3>
+<i class="fas fa-landmark"></i>
+Visión
+</h3>
 
 <p>
 
-Ser una organización jurídica reconocida por su liderazgo, compromiso social y aportación al fortalecimiento del Estado de Derecho, consolidándose como un referente en la formación profesional y la promoción de una justicia accesible.
+Ser una organización jurídica reconocida por su liderazgo, compromiso social y aportación al fortalecimiento del Estado de Derecho.
 
 </p>
 
 </div>
 
+
 <div class="card">
 
-<h3>🤝 Compromiso</h3>
+<h3>
+<i class="fas fa-handshake"></i>
+Compromiso
+</h3>
 
 <p>
 
-Trabajamos para que el conocimiento jurídico y el acceso a la justicia no sean privilegios de unos cuantos, sino derechos efectivos al alcance de todas las personas.
+Trabajar para fortalecer la cultura jurídica y acercar el conocimiento del Derecho a la sociedad.
 
 </p>
 
 </div>
+
 
 </div>
 
 </section>
+
+
 
 <section id="circulares">
 
-<h2>📢 Circulares y Avisos</h2>
+
+<h2>
+
+<i class="fas fa-bullhorn"></i>
+
+Circulares y Avisos
+
+</h2>
+
+
 
 <div class="card">
 
-<h3>Tribunal Superior de Justicia del Estado de Hidalgo</h3>
+<h3>
+
+<i class="fas fa-gavel"></i>
+
+Tribunal Superior de Justicia del Estado de Hidalgo
+
+</h3>
+
 
 <p>
 
-Espacio destinado para publicar acuerdos, circulares, comunicados y avisos oficiales del Poder Judicial del Estado de Hidalgo.
+Espacio destinado para publicar acuerdos, circulares, comunicados y avisos oficiales.
 
 </p>
 
 </div>
 
+
+
 <div class="card">
 
-<h3>Poder Judicial del Estado de México</h3>
+<h3>
+
+<i class="fas fa-building-columns"></i>
+
+Poder Judicial del Estado de México
+
+</h3>
+
 
 <p>
 
-Espacio destinado para publicar acuerdos, calendarios, comunicados y disposiciones oficiales.
+Espacio destinado para publicar acuerdos, calendarios y disposiciones oficiales.
 
 </p>
 
 </div>
 
+
+
 <div class="card">
 
-<h3>Noticias de la Barra</h3>
+<h3>
+
+<i class="fas fa-graduation-cap"></i>
+
+Noticias de la Barra
+
+</h3>
+
 
 <p>
 
-Aquí podrán publicarse convocatorias, eventos académicos, cursos, diplomados, seminarios y comunicados institucionales.
+Convocatorias, cursos, diplomados, seminarios y actividades institucionales.
 
 </p>
 
 </div>
+
 
 </section>
+
+
+
+
 <section id="calendario">
 
-<h2>📅 Calendario Oficial</h2>
+
+<h2>
+
+<i class="fas fa-calendar-days"></i>
+
+Calendario Oficial
+
+</h2>
+
+
 
 <div class="card" style="text-align:center;">
 
-<h3>Calendario Judicial</h3>
+
+<h3>
+
+<i class="fas fa-calendar-check"></i>
+
+Calendario Judicial
+
+</h3>
+
 
 <br>
+
 
 <p>
 
@@ -638,52 +397,94 @@ Consulta el calendario oficial de labores y días inhábiles del Poder Judicial.
 
 </p>
 
-<br>
+
 
 <a
+
 href="https://www.pjedomex.gob.mx/vista/32_horario_y_calendario_oficial"
+
 target="_blank"
+
 class="btn">
+
 
 Ver Calendario Oficial
 
+
 </a>
+
 
 </div>
 
-<!-- NUEVA SECCIÓN DE IMÁGENES PARALELAS -->
+
 
 <div class="card">
+
 
 <div class="calendario-imagenes">
 
+
 <img
+
 src="Calendario_2026_PJCDMX.jpg"
-alt="Calendario Judicial">
+
+style="width:48%;border-radius:15px;">
+
+
 
 <img
+
 src="WhatsApp Image 2026-06-17 at 11.46.26 AM.jpeg"
-alt="Actividad Institucional">
+
+style="width:48%;border-radius:15px;">
+
 
 </div>
 
+
 </div>
+
+
 
 </section>
 
+
+
+
+
 <section id="tribunales">
 
-<h2>⚖️ Tribunales y Organismos Jurídicos</h2>
+
+<h2>
+
+<i class="fas fa-scale-balanced"></i>
+
+Tribunales y Organismos Jurídicos
+
+</h2>
+
+
 
 <div class="cards">
 
+
+
 <div class="card">
 
-<h3>Poder Judicial del Estado de Hidalgo</h3>
+<h3>
+<i class="fas fa-landmark"></i>
+
+Poder Judicial del Estado de Hidalgo
+
+</h3>
+
 
 <a
+
 href="https://www.pjhidalgo.gob.mx/"
+
 target="_blank"
+
 class="btn">
 
 Ingresar
@@ -692,13 +493,26 @@ Ingresar
 
 </div>
 
+
+
+
 <div class="card">
 
-<h3>Poder Judicial de la Ciudad de México</h3>
+<h3>
+
+<i class="fas fa-building-columns"></i>
+
+Poder Judicial de la Ciudad de México
+
+</h3>
+
 
 <a
+
 href="https://poderjudicialcdmx.gob.mx/"
+
 target="_blank"
+
 class="btn">
 
 Ingresar
@@ -707,13 +521,26 @@ Ingresar
 
 </div>
 
+
+
+
 <div class="card">
 
-<h3>Poder Judicial del Estado de México</h3>
+<h3>
+
+<i class="fas fa-scale-balanced"></i>
+
+Poder Judicial del Estado de México
+
+</h3>
+
 
 <a
+
 href="https://www.pjedomex.gob.mx/vista/1_inicio"
+
 target="_blank"
+
 class="btn">
 
 Ingresar
@@ -722,87 +549,169 @@ Ingresar
 
 </div>
 
+
+
+
 <div class="card">
 
-<h3>Consulta de Datos de Expedientes OAJ</h3>
+<h3>
+
+<i class="fas fa-folder-open"></i>
+
+Consulta de Datos de Expedientes OAJ
+
+</h3>
+
 
 <a
+
 href="https://www.oaj.gob.mx/micrositios/dggj/paginas/serviciosTramites.htm?pageName=servicios%2Fexpedientes.htm"
+
 target="_blank"
+
 class="btn">
 
 Consultar Expedientes
 
 </a>
 
+
 </div>
+
+
+
+
 
 <div class="card">
 
-<h3>Instituto Registral del Estado de Hidalgo</h3>
+<h3>
+
+<i class="fas fa-book"></i>
+
+Instituto Registral del Estado de Hidalgo
+
+</h3>
+
 
 <a
+
 href="http://institutoregistral.hidalgo.gob.mx/"
+
 target="_blank"
+
 class="btn">
+
 
 IFREH Hidalgo
 
+
 </a>
+
 
 </div>
 
+
+
+
+
 <div class="card">
 
-<h3>IFREM Estado de México</h3>
+<h3>
 
-<a
-href="https://ifrem.edomex.gob.mx/"
-target="_blank"
-class="btn">
+<i class="fas fa-file-signature"></i>
 
 IFREM Estado de México
 
+</h3>
+
+
+<a
+
+href="https://ifrem.edomex.gob.mx/"
+
+target="_blank"
+
+class="btn">
+
+
+IFREM Estado de México
+
+
 </a>
+
 
 </div>
 
+
+
+
 <div class="card">
 
-<h3>⚖️ Suprema Corte de Justicia de la Nación</h3>
+<h3>
+
+<i class="fas fa-landmark"></i>
+
+Suprema Corte de Justicia de la Nación
+
+</h3>
+
 
 <a
+
 href="https://www.scjn.gob.mx/"
+
 target="_blank"
+
 class="btn">
 
 Ingresar
 
 </a>
 
+
 </div>
+
+
+
 
 <div class="card">
 
-<h3>📜 Diario Oficial de la Federación</h3>
+<h3>
+
+<i class="fas fa-scroll"></i>
+
+Diario Oficial de la Federación
+
+</h3>
+
 
 <a
+
 href="https://www.dof.gob.mx/"
+
 target="_blank"
+
 class="btn">
 
 Consultar
 
 </a>
 
-</div>
 
 </div>
+
+
+
+</div>
+
 
 </section>
 <section id="galeria">
 
-<h2>🖼️ Galería Institucional</h2>
+<h2>
+<i class="fas fa-images"></i>
+Galería Institucional
+</h2>
 
 <div class="galeria">
 
@@ -838,65 +747,52 @@ Consultar
 <img src="WhatsApp Image 2026-06-17 at 11.46.26 AM.jpeg">
 </div>
 
-<div class="slide">
-<img src="Calendario_2026_PJCDMX.jpg">
-</div>
-
 </div>
 
 </section>
+
+
 
 <section>
 
-<h2>🌐 Redes Sociales</h2>
+<h2>
+<i class="fas fa-globe"></i>
+Redes Sociales
+</h2>
 
 <div class="social">
 
-<a
-href="https://www.facebook.com/share/17pQSZRdxd/"
-target="_blank">
-
-Facebook
-
+<a href="https://www.facebook.com/share/17pQSZRdxd/" target="_blank">
+<i class="fab fa-facebook"></i> Facebook
 </a>
 
-<a
-href="https://www.instagram.com/bavth_2608"
-target="_blank">
-
-Instagram
-
+<a href="https://www.instagram.com/bavth_2608" target="_blank">
+<i class="fab fa-instagram"></i> Instagram
 </a>
 
 </div>
 
 </section>
 
+
+
+
 <section id="contacto">
 
-<h2>✉️ Contacto</h2>
+<h2>
+<i class="fas fa-envelope"></i>
+Contacto
+</h2>
 
 <form action="mailto:barradeabogadostizayuca@gmail.com" method="post" enctype="text/plain">
 
-<input
-type="text"
-name="nombre"
-placeholder="Nombre Completo"
-required>
+<input type="text" name="nombre" placeholder="Nombre Completo" required>
 
-<input
-type="email"
-name="correo"
-placeholder="Correo Electrónico"
-required>
+<input type="email" name="correo" placeholder="Correo Electrónico" required>
 
-<textarea
-name="mensaje"
-rows="6"
-placeholder="Escriba su mensaje"
-required></textarea>
+<textarea name="mensaje" rows="6" placeholder="Mensaje" required></textarea>
 
-<button type="submit">
+<button type="submit" class="btn">
 
 Enviar Mensaje
 
@@ -909,41 +805,43 @@ Enviar Mensaje
 <div style="text-align:center;">
 
 <h3>
-
 Correo Institucional
-
 </h3>
 
 <p>
-
 barradeabogadostizayuca@gmail.com
-
 </p>
 
 </div>
 
 </section>
 
+
+
+
 <section>
+
+<h2>
+<i class="fas fa-chart-line"></i>
+Visitantes del Portal
+</h2>
 
 <div style="text-align:center;">
 
-<h2>📈 Visitantes del Portal</h2>
-
-<img
-src="https://hitwebcounter.com/counter/counter.php?page=10485809&style=0006&nbdigits=6&type=page&initCount=0"
-alt="contador">
+<img src="https://hitwebcounter.com/counter/counter.php?page=10485809&style=0006&nbdigits=6&type=page&initCount=0">
 
 </div>
 
 </section>
 
+
+
+
 <footer>
 
 <h3>
 
-Barra de Abogados del Valle de Tizayuca,
-Estado de Hidalgo, A.C.
+Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.
 
 </h3>
 
@@ -951,10 +849,7 @@ Estado de Hidalgo, A.C.
 
 <p>
 
-Promoviendo la cultura jurídica,
-la legalidad,
-la difusión de la justicia
-y el fortalecimiento del Estado de Derecho.
+Promoviendo la cultura jurídica, la legalidad y el fortalecimiento del Estado de Derecho.
 
 </p>
 
@@ -966,7 +861,7 @@ y el fortalecimiento del Estado de Derecho.
 
 </p>
 
-<!-- RELOJ MOVIDO AL FOOTER -->
+<!-- RELOJ EN FOOTER -->
 
 <div class="footer-reloj">
 
@@ -976,23 +871,23 @@ y el fortalecimiento del Estado de Derecho.
 
 </footer>
 
+
+
+
+
 <script>
 
 /* RELOJ */
-
 function actualizarReloj(){
 
 const ahora = new Date();
 
-const fecha = ahora.toLocaleDateString(
-'es-MX',
-{
+const fecha = ahora.toLocaleDateString('es-MX',{
 weekday:'long',
 year:'numeric',
 month:'long',
 day:'numeric'
-}
-);
+});
 
 const hora = ahora.toLocaleTimeString('es-MX');
 
@@ -1002,45 +897,35 @@ document.getElementById('reloj').innerHTML =
 }
 
 setInterval(actualizarReloj,1000);
-
 actualizarReloj();
 
+
+
 /* CARRUSEL */
-
 let slideIndex = 0;
-
 mostrarSlides();
 
 function mostrarSlides(){
 
-let slides =
-document.getElementsByClassName("slide");
+let slides = document.getElementsByClassName("slide");
 
 for(let i=0;i<slides.length;i++){
-
 slides[i].style.display="none";
-
 }
 
 slideIndex++;
 
 if(slideIndex > slides.length){
-
 slideIndex = 1;
-
 }
 
 slides[slideIndex-1].style.display="block";
 
-setTimeout(
-mostrarSlides,
-4000
-);
+setTimeout(mostrarSlides,4000);
 
 }
 
 </script>
 
 </body>
-
 </html>
