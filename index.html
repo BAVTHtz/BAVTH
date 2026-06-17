@@ -334,15 +334,49 @@ width:100%;
 
 }
 
+/* CAMBIO PARA QUE LAS IMÁGENES NO SE RECORTEN */
+
 .slide img{
 
 width:100%;
 
 height:600px;
 
-object-fit:cover;
+object-fit:contain;
+
+background:white;
 
 }
+
+/* NUEVO BLOQUE PARA LAS IMÁGENES DEL CALENDARIO */
+
+.calendario-imagenes{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.calendario-imagenes img{
+
+width:48%;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+object-fit:contain;
+
+}
+
+/* FOOTER MODIFICADO */
 
 footer{
 
@@ -356,7 +390,39 @@ padding:40px;
 
 border-top:3px solid var(--dorado);
 
+position:relative;
+
 }
+
+.footer-reloj{
+
+position:absolute;
+
+right:30px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+text-align:right;
+
+}
+
+.footer-reloj #reloj{
+
+margin:0;
+
+padding:0;
+
+background:none;
+
+border-radius:0;
+
+font-size:1rem;
+
+color:var(--dorado);
+
+}/* CONTINUACIÓN DEL BLOQUE <style> */
 
 @media(max-width:768px){
 
@@ -375,6 +441,17 @@ height:300px;
 
 section{
 padding:80px 6%;
+}
+
+.calendario-imagenes img{
+width:100%;
+}
+
+.footer-reloj{
+position:static;
+transform:none;
+margin-top:20px;
+text-align:center;
 }
 
 }
@@ -414,7 +491,7 @@ src="LOGO_BARRA-removebg-preview.png"
 alt="Logo BAVTH"
 class="logo">
 
-<div id="reloj"></div>
+<!-- RELOJ ELIMINADO DE LA PORTADA -->
 
 <h1>
 
@@ -439,6 +516,7 @@ Conócenos
 </a>
 
 </section>
+
 <section id="nosotros">
 
 <h2>¿Quiénes Somos?</h2>
@@ -544,7 +622,6 @@ Aquí podrán publicarse convocatorias, eventos académicos, cursos, diplomados,
 </div>
 
 </section>
-
 <section id="calendario">
 
 <h2>📅 Calendario Oficial</h2>
@@ -574,11 +651,21 @@ Ver Calendario Oficial
 
 </div>
 
-<div class="card" style="text-align:center;">
+<!-- NUEVA SECCIÓN DE IMÁGENES PARALELAS -->
+
+<div class="card">
+
+<div class="calendario-imagenes">
 
 <img
 src="Calendario_2026_PJCDMX.jpg"
-style="width:100%;max-width:700px;border-radius:15px;">
+alt="Calendario Judicial">
+
+<img
+src="WhatsApp Image 2026-06-17 at 11.46.26 AM.jpeg"
+alt="Actividad Institucional">
+
+</div>
 
 </div>
 
@@ -659,7 +746,7 @@ href="http://institutoregistral.hidalgo.gob.mx/"
 target="_blank"
 class="btn">
 
-IFREM Hidalgo
+IFREH Hidalgo
 
 </a>
 
@@ -879,6 +966,14 @@ y el fortalecimiento del Estado de Derecho.
 
 </p>
 
+<!-- RELOJ MOVIDO AL FOOTER -->
+
+<div class="footer-reloj">
+
+<div id="reloj"></div>
+
+</div>
+
 </footer>
 
 <script>
@@ -947,4 +1042,5 @@ mostrarSlides,
 </script>
 
 </body>
+
 </html>
