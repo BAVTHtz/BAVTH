@@ -466,4 +466,147 @@ Consultar
 
 </div>
 
-</section>
+</section><!-- ===================== GALERÍA ===================== -->
+<section id="galeria">
+
+<h2>
+<i class="fas fa-images"></i>
+Galería Institucional
+</h2>
+
+<div class="cards">
+
+<div class="card"><img src="650047320_122166650984947773_557821829667716147_n.jpg" style="width:100%;border-radius:12px;object-fit:cover;"></div>
+
+<div class="card"><img src="517653142_122255781176140669_2056361342759283861_n.jpg" style="width:100%;border-radius:12px;object-fit:cover;"></div>
+
+<div class="card"><img src="WhatsApp Image 2026-04-15 at 6.27.05 PM.jpeg" style="width:100%;border-radius:12px;object-fit:cover;"></div>
+
+<div class="card"><img src="WhatsApp Image 2026-06-15 at 3.18.11 PM.jpeg" style="width:100%;border-radius:12px;object-fit:cover;"></div>
+
+<div class="card"><img src="WhatsApp Image 2026-06-15 at 3.22.42 PM.jpeg" style="width:100%;border-radius:12px;object-fit:cover;"></div>
+
+<div class="card"><img src="WhatsApp Image 2026-06-17 at 11.45.30 AM.jpeg" style="width:100%;border-radius:12px;object-fit:cover;"></div>
+
+</div>
+
+</section><!-- ===================== REDES ===================== -->
+<section>
+
+<h2>
+<i class="fas fa-globe"></i>
+Redes Sociales
+</h2>
+
+<div class="cards" style="text-align:center;">
+
+<div class="card">
+<a href="https://www.facebook.com/share/17pQSZRdxd/" target="_blank" class="btn">
+<i class="fab fa-facebook"></i> Facebook
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.instagram.com/bavth_2608" target="_blank" class="btn">
+<i class="fab fa-instagram"></i> Instagram
+</a>
+</div>
+
+</div>
+
+</section><!-- ===================== CONTACTO ===================== -->
+<section id="contacto">
+
+<h2>
+<i class="fas fa-envelope"></i>
+Contacto
+</h2>
+
+<div class="card" style="max-width:700px;margin:auto;text-align:center;">
+
+<form action="mailto:barradeabogadostizayuca@gmail.com"
+method="post" enctype="text/plain"
+style="display:flex;flex-direction:column;gap:15px;">
+
+<input type="text" name="nombre" placeholder="Nombre Completo" required
+style="padding:12px;border-radius:8px;border:1px solid #ccc;">
+
+<input type="email" name="correo" placeholder="Correo Electrónico" required
+style="padding:12px;border-radius:8px;border:1px solid #ccc;">
+
+<textarea name="mensaje" rows="6" placeholder="Mensaje" required
+style="padding:12px;border-radius:8px;border:1px solid #ccc;"></textarea>
+
+<button type="submit" class="btn">Enviar Mensaje</button>
+
+</form>
+
+<br>
+
+<h3>Correo Institucional</h3>
+<p>barradeabogadostizayuca@gmail.com</p>
+
+</div>
+
+</section><!-- ===================== FOOTER ===================== -->
+<footer style="background:#0B1F3A;color:white;text-align:center;padding:40px 20px;margin-top:60px;">
+
+<h3>Barra de Abogados del Valle de Tizayuca, A.C.</h3>
+
+<p style="margin-top:10px;">
+Promoviendo la cultura jurídica, la legalidad y el fortalecimiento del Estado de Derecho.
+</p>
+
+<p style="margin-top:10px;">
+© 2026 Todos los derechos reservados.
+</p>
+
+<div style="margin-top:20px;font-size:1rem;" id="reloj"></div>
+
+</footer><script>
+
+/* RELOJ */
+function actualizarReloj(){
+const ahora = new Date();
+
+const fecha = ahora.toLocaleDateString('es-MX',{
+weekday:'long',
+year:'numeric',
+month:'long',
+day:'numeric'
+});
+
+const hora = ahora.toLocaleTimeString('es-MX');
+
+document.getElementById('reloj').innerHTML =
+'🕒 ' + hora + '<br>' + fecha;
+}
+
+setInterval(actualizarReloj,1000);
+actualizarReloj();
+
+/* SLIDER GALERÍA */
+let slideIndex = 0;
+mostrarSlides();
+
+function mostrarSlides(){
+let slides = document.getElementsByClassName("slide");
+
+if(slides.length === 0) return;
+
+for(let i=0;i<slides.length;i++){
+slides[i].style.display="none";
+}
+
+slideIndex++;
+
+if(slideIndex > slides.length){
+slideIndex = 1;
+}
+
+slides[slideIndex-1].style.display="block";
+
+setTimeout(mostrarSlides,4000);
+}
+
+</script>
