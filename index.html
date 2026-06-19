@@ -2,22 +2,24 @@
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.</title>
 
+<!-- ICONOS -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+<!-- TIPOGRAFÍA (si tienes la fuente local, luego la conectamos) -->
 <style>
 
 :root{
 --azul:#0B1F3A;
 --dorado:#C9A227;
+--negro:#111111;
+--gris:#f5f5f5;
 --blanco:#ffffff;
---gris:#f4f4f4;
 }
 
 *{
@@ -35,12 +37,14 @@ line-height:1.7;
 overflow-x:hidden;
 }
 
+/* HEADER */
 header{
-background:rgba(11,31,58,.96);
+background:rgba(11,31,58,.95);
 position:sticky;
 top:0;
 z-index:999;
 border-bottom:3px solid var(--dorado);
+box-shadow:0 5px 20px rgba(0,0,0,.25);
 }
 
 nav{
@@ -62,574 +66,404 @@ nav a:hover{
 color:var(--dorado);
 }
 
+/* HERO */
 .hero{
-
 background:
-linear-gradient(
-rgba(11,31,58,.82),
-rgba(11,31,58,.82)
-),
+linear-gradient(rgba(11,31,58,.82),rgba(11,31,58,.82)),
 url("themis.jpg");
-
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-
 min-height:100vh;
-
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-
 text-align:center;
-
 color:white;
-
 padding:120px 20px;
 }
 
+/* LOGO CIRCULAR (ARREGLADO) */
 .logo{
-
-width:320px;
-height:320px;
-
-object-fit:contain;
-
-background:transparent;
-
-display:block;
-
+width:260px;
+height:260px;
+border-radius:50%;
+object-fit:cover;
+background:white;
+padding:10px;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
 margin-bottom:25px;
-
-filter:
-drop-shadow(
-0 10px 25px rgba(0,0,0,.45)
-);
-
 }
 
+/* TITULO HERO */
 .hero h1{
-
-font-size:2.8rem;
-
+font-size:2.3rem;
 color:var(--dorado);
-
-margin-bottom:25px;
-
-max-width:1200px;
-
-}
-
-.frase-principal{
-
-font-size:1.9rem;
-
-font-weight:600;
-
-max-width:950px;
-
-line-height:1.7;
-
-padding:25px 35px;
-
-background:rgba(0,0,0,.25);
-
-border-left:5px solid var(--dorado);
-
-border-right:5px solid var(--dorado);
-
-border-radius:15px;
-
-text-shadow:
-2px 2px 8px rgba(0,0,0,.6);
-
-}
-
-.btn{
-
-display:inline-block;
-
-margin-top:30px;
-
-padding:14px 30px;
-
-background:var(--dorado);
-
-color:black;
-
+max-width:1100px;
 font-weight:bold;
+}
 
+/* FRASE SIN EMOJIS */
+.hero p{
+margin-top:20px;
+max-width:900px;
+font-size:1.1rem;
+}
+
+/* BOTON */
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+background:linear-gradient(135deg,#C9A227,#e5c65a);
+color:#111;
+font-weight:bold;
 text-decoration:none;
-
 border-radius:8px;
-
 transition:.3s;
-
+border:1px solid #b08a18;
 }
 
 .btn:hover{
-transform:translateY(-3px);
+background:var(--azul);
+color:white;
 }
 
 section{
 padding:100px 10%;
 }
 
+/* TITULOS */
 h2{
 text-align:center;
-margin-bottom:40px;
 color:var(--azul);
 font-size:2rem;
+margin-bottom:60px;
+position:relative;
+}
+
+h2::after{
+content:"";
+width:80px;
+height:3px;
+background:var(--dorado);
+position:absolute;
+bottom:-15px;
+left:50%;
+transform:translateX(-50%);
 }
 
 .card{
-
 background:white;
-
 padding:25px;
-
 border-radius:15px;
-
 box-shadow:0 5px 15px rgba(0,0,0,.08);
-
 margin-bottom:20px;
-
 }
 
 .cards{
-
 display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
-
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
-
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:1.8rem;
-}
-
-.logo{
-width:190px;
-height:190px;
-}
-
-.frase-principal{
-font-size:1.2rem;
-padding:15px;
-}
-
-section{
-padding:80px 6%;
-}
-
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 <nav>
-
 <a href="#inicio">Inicio</a>
 <a href="#nosotros">Nosotros</a>
+<a href="#circulares">Circulares</a>
 <a href="#calendario">Calendario</a>
 <a href="#tribunales">Tribunales</a>
 <a href="#galeria">Galería</a>
 <a href="#contacto">Contacto</a>
-
 </nav>
-
 </header>
 
 <section id="inicio" class="hero">
 
-<img
-src="LOGO_BARRA-removebg-preview.png"
-alt="Logo BAVTH"
-class="logo">
+<!-- LOGO YA EN CÍRCULO -->
+<img src="LOGO_BARRA-removebg-preview.png" class="logo">
 
 <h1>
-
-Barra de Abogados del Valle de Tizayuca,
-Estado de Hidalgo, A.C.
-
+Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.
 </h1>
 
-<p class="frase-principal">
-
-⚖️ Comprometidos con la formación jurídica y el fortalecimiento del Estado de Derecho.
-
+<p>
+Comprometidos con la formación jurídica y el fortalecimiento del Estado de Derecho.
 </p>
 
-<a href="#nosotros" class="btn">
+<a href="#nosotros" class="btn">Conócenos</a>
 
-Conócenos
+</section><!-- ===================== NOSOTROS ===================== -->
+<section id="nosotros">
 
-</a>
-
-</section><section id="nosotros">
-
-<h2>¿Quiénes Somos?</h2>
+<h2>
+<i class="fas fa-scale-balanced"></i>
+¿Quiénes Somos?
+</h2>
 
 <div class="card">
 
 <p>
-
-La Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C., es una asociación civil integrada por profesionales del Derecho comprometidos con el fortalecimiento de la cultura jurídica, la promoción de la legalidad, la defensa del Estado de Derecho y el desarrollo profesional de sus integrantes.
-
+La Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C., es una asociación civil integrada por profesionales del Derecho comprometidos con el fortalecimiento de la cultura jurídica, la promoción de la legalidad, la defensa del Estado de Derecho y el desarrollo profesional.
 </p>
 
 <br>
 
 <p>
-
-Nuestra organización reúne a abogados, juristas y especialistas de diversas ramas del Derecho, provenientes tanto del sector público como del privado, con el propósito de generar espacios de análisis, colaboración e intercambio de conocimientos que contribuyan al perfeccionamiento de la práctica jurídica, al fortalecimiento de las instituciones y a la consolidación de una sociedad más justa y respetuosa de la legalidad.
-
-</p>
-
-<br>
-
-<p>
-
-Asimismo, mantenemos un firme compromiso con la difusión de la justicia y la cultura de la legalidad entre la población en general. Estamos convencidos de que el conocimiento de los derechos y obligaciones es una herramienta indispensable para el desarrollo de una sociedad más informada, participativa y democrática.
-
+Nuestra organización reúne abogados, juristas y especialistas de diversas ramas del Derecho, generando espacios de análisis, colaboración e intercambio de conocimientos para contribuir al perfeccionamiento de la práctica jurídica y al fortalecimiento de las instituciones.
 </p>
 
 </div>
+
+<!-- ===================== CARDS ===================== -->
+<div class="cards">
+
+<!-- MISIÓN -->
+<div class="card">
+
+<h3>
+<i class="fas fa-bullseye"></i>
+Misión
+</h3>
+
+<p>
+Promover la excelencia profesional, la actualización permanente, la ética jurídica y la participación activa de los profesionales del Derecho.
+</p>
+
+</div>
+
+<!-- VISIÓN -->
+<div class="card">
+
+<h3>
+<i class="fas fa-landmark"></i>
+Visión
+</h3>
+
+<p>
+Ser una organización jurídica reconocida por su liderazgo, compromiso social y aportación al fortalecimiento del Estado de Derecho.
+</p>
+
+</div>
+
+<!-- COMPROMISO -->
+<div class="card">
+
+<h3>
+<i class="fas fa-handshake"></i>
+Compromiso
+</h3>
+
+<p>
+Trabajar para fortalecer la cultura jurídica y acercar el conocimiento del Derecho a la sociedad.
+</p>
+
+</div>
+
+</div>
+
+</section><!-- ===================== CIRCULARES ===================== -->
+<section id="circulares">
+
+<h2>
+<i class="fas fa-bullhorn"></i>
+Circulares y Avisos
+</h2>
 
 <div class="cards">
 
+<!-- TSJ HIDALGO -->
 <div class="card">
 
-<h3>⚖️ Misión</h3>
+<h3>
+<i class="fas fa-gavel"></i>
+Tribunal Superior de Justicia del Estado de Hidalgo
+</h3>
 
 <p>
-
-Promover la excelencia profesional, la actualización permanente, la ética jurídica y la participación activa de los profesionales del Derecho, contribuyendo al fortalecimiento de las instituciones, la mejora de las políticas públicas y la difusión de la cultura jurídica y de la justicia en beneficio de la sociedad.
-
+Espacio destinado para publicar acuerdos, circulares, comunicados y avisos oficiales.
 </p>
 
 </div>
 
+<!-- PODER JUDICIAL EDOMEX -->
 <div class="card">
 
-<h3>🏛️ Visión</h3>
+<h3>
+<i class="fas fa-building-columns"></i>
+Poder Judicial del Estado de México
+</h3>
 
 <p>
-
-Ser una organización jurídica reconocida por su liderazgo, compromiso social y aportación al fortalecimiento del Estado de Derecho, consolidándose como un referente en la formación profesional, el análisis jurídico, la participación ciudadana y la promoción de una justicia accesible para todas las personas.
-
+Espacio destinado para publicar acuerdos, calendarios y disposiciones oficiales.
 </p>
 
 </div>
 
+<!-- NOTICIAS BARRA -->
 <div class="card">
 
-<h3>🤝 Nuestro Compromiso</h3>
+<h3>
+<i class="fas fa-graduation-cap"></i>
+Noticias de la Barra
+</h3>
 
 <p>
-
-Trabajamos para que el conocimiento jurídico y el acceso a la justicia no sean privilegios de unos cuantos, sino derechos efectivos al alcance de todas las personas.
-
+Convocatorias, cursos, diplomados, seminarios y actividades institucionales.
 </p>
 
 </div>
 
 </div>
 
-</section>
-
+</section><!-- ===================== CALENDARIO ===================== -->
 <section id="calendario">
 
-<h2>📅 Calendario Oficial</h2>
+<h2>
+<i class="fas fa-calendar-days"></i>
+Calendario Oficial
+</h2>
 
 <div class="card" style="text-align:center;">
 
-<h3>Calendario Judicial</h3>
-
-<br>
+<h3>
+<i class="fas fa-calendar-check"></i>
+Calendario Judicial
+</h3>
 
 <p>
-
 Consulta el calendario oficial de labores y días inhábiles del Poder Judicial.
-
 </p>
 
-<br>
-
-<a
-href="https://www.pjedomex.gob.mx/vista/32_horario_y_calendario_oficial"
+<a href="https://www.pjedomex.gob.mx/vista/32_horario_y_calendario_oficial"
 target="_blank"
 class="btn">
-
 Ver Calendario Oficial
-
 </a>
 
 </div>
 
-<div class="card" style="text-align:center;">
+<!-- IMÁGENES MEJOR CONTROLADAS -->
+<div class="cards">
 
-<img
-src="Calendario_2026_PJCDMX.jpg"
-alt="Calendario Judicial"
-style="
-width:100%;
-max-width:800px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-">
+<div class="card" style="text-align:center;">
+<img src="Calendario_2026_PJCDMX.jpg"
+style="width:100%;border-radius:12px;max-height:400px;object-fit:contain;">
+</div>
+
+<div class="card" style="text-align:center;">
+<img src="WhatsApp Image 2026-06-17 at 11.46.26 AM.jpeg"
+style="width:100%;border-radius:12px;max-height:400px;object-fit:contain;">
+</div>
+
+</div>
+
+</section><!-- ===================== TRIBUNALES ===================== -->
+<section id="tribunales">
+
+<h2>
+<i class="fas fa-scale-balanced"></i>
+Tribunales y Organismos Jurídicos
+</h2>
+
+<div class="cards">
+
+<!-- HIDALGO -->
+<div class="card">
+<h3>
+<i class="fas fa-landmark"></i>
+Poder Judicial del Estado de Hidalgo
+</h3>
+<a href="https://www.pjhidalgo.gob.mx/" target="_blank" class="btn">
+Ingresar
+</a>
+</div>
+
+<!-- CDMX -->
+<div class="card">
+<h3>
+<i class="fas fa-building-columns"></i>
+Poder Judicial de la Ciudad de México
+</h3>
+<a href="https://poderjudicialcdmx.gob.mx/" target="_blank" class="btn">
+Ingresar
+</a>
+</div>
+
+<!-- EDOMEX -->
+<div class="card">
+<h3>
+<i class="fas fa-scale-balanced"></i>
+Poder Judicial del Estado de México
+</h3>
+<a href="https://www.pjedomex.gob.mx/vista/1_inicio" target="_blank" class="btn">
+Ingresar
+</a>
+</div>
+
+<!-- OAJ -->
+<div class="card">
+<h3>
+<i class="fas fa-folder-open"></i>
+Consulta de Expedientes OAJ
+</h3>
+<a href="https://www.oaj.gob.mx/micrositios/dggj/paginas/serviciosTramites.htm?pageName=servicios%2Fexpedientes.htm"
+target="_blank" class="btn">
+Consultar
+</a>
+</div>
+
+<!-- IFREH -->
+<div class="card">
+<h3>
+<i class="fas fa-book"></i>
+Instituto Registral del Estado de Hidalgo
+</h3>
+<a href="http://institutoregistral.hidalgo.gob.mx/" target="_blank" class="btn">
+IFREH Hidalgo
+</a>
+</div>
+
+<!-- IFREM -->
+<div class="card">
+<h3>
+<i class="fas fa-file-signature"></i>
+IFREM Estado de México
+</h3>
+<a href="https://ifrem.edomex.gob.mx/" target="_blank" class="btn">
+IFREM
+</a>
+</div>
+
+<!-- SCJN -->
+<div class="card">
+<h3>
+<i class="fas fa-landmark"></i>
+Suprema Corte de Justicia de la Nación
+</h3>
+<a href="https://www.scjn.gob.mx/" target="_blank" class="btn">
+Ingresar
+</a>
+</div>
+
+<!-- DOF -->
+<div class="card">
+<h3>
+<i class="fas fa-scroll"></i>
+Diario Oficial de la Federación
+</h3>
+<a href="https://www.dof.gob.mx/" target="_blank" class="btn">
+Consultar
+</a>
+</div>
 
 </div>
 
 </section>
-
-<section id="tribunales">
-
-<h2>⚖️ Tribunales y Organismos Jurídicos</h2>
-
-<div class="cards">
-
-<div class="card" style="text-align:center;">
-
-<h3>Poder Judicial del Estado de Hidalgo</h3>
-
-<a
-href="https://www.pjhidalgo.gob.mx/"
-target="_blank"
-class="btn">
-
-Ingresar
-
-</a>
-
-</div>
-
-<div class="card" style="text-align:center;">
-
-<h3>Poder Judicial de la Ciudad de México</h3>
-
-<a
-href="https://poderjudicialcdmx.gob.mx/"
-target="_blank"
-class="btn">
-
-Ingresar
-
-</a>
-
-</div>
-
-<div class="card" style="text-align:center;">
-
-<h3>Poder Judicial del Estado de México</h3>
-
-<a
-href="https://www.pjedomex.gob.mx/vista/1_inicio"
-target="_blank"
-class="btn">
-
-Ingresar
-
-</a>
-
-</div>
-
-<div class="card" style="text-align:center;">
-
-<h3>Consulta de Datos de Expedientes OAJ</h3>
-
-<a
-href="https://www.oaj.gob.mx/micrositios/dggj/paginas/serviciosTramites.htm?pageName=servicios%2Fexpedientes.htm"
-target="_blank"
-class="btn">
-
-Consultar Expedientes
-
-</a>
-
-</div>
-
-<div class="card" style="text-align:center;">
-
-<h3>Instituto Registral del Estado de Hidalgo</h3>
-
-<a
-href="http://institutoregistral.hidalgo.gob.mx/"
-target="_blank"
-class="btn">
-
-Ingresar
-
-</a>
-
-</div>
-
-<div class="card" style="text-align:center;">
-
-<h3>IFREM Estado de México</h3>
-
-<a
-href="https://ifrem.edomex.gob.mx/"
-target="_blank"
-class="btn">
-
-Ingresar
-
-</a>
-
-</div>
-
-<div class="card" style="text-align:center;">
-
-<h3>Suprema Corte de Justicia de la Nación</h3>
-
-<a
-href="https://www.scjn.gob.mx/"
-target="_blank"
-class="btn">
-
-Ingresar
-
-</a>
-
-</div>
-
-<div class="card" style="text-align:center;">
-
-<h3>Diario Oficial de la Federación</h3>
-
-<a
-href="https://www.dof.gob.mx/"
-target="_blank"
-class="btn">
-
-Consultar
-
-</a>
-
-</div>
-
-</div>
-
-</section><!-- =========================
-     JAVASCRIPT GENERAL
-========================= -->
-<script>
-// MENÚ RESPONSIVO
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav ul");
-
-if (menuToggle && nav) {
-  menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-}
-
-// SCROLL SUAVE ENTRE SECCIONES
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const target = document.querySelector(this.getAttribute("href"));
-
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }
-  });
-});
-
-// VALIDACIÓN FORMULARIO CONTACTO
-const form = document.querySelector("#contactForm");
-
-if (form) {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const nombre = document.querySelector("#nombre")?.value.trim();
-    const mensaje = document.querySelector("#mensaje")?.value.trim();
-
-    if (!nombre || !mensaje) {
-      alert("Por favor completa todos los campos.");
-      return;
-    }
-
-    alert("Mensaje enviado correctamente.");
-    form.reset();
-  });
-}
-</script>
-
-<!-- =========================
-     CSS CONTACTO CENTRADO
-========================= -->
-<style>
-#contacto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 20px;
-  flex-direction: column;
-  text-align: center;
-}
-
-#contacto form {
-  width: 100%;
-  max-width: 500px;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-
-#contacto input,
-#contacto textarea {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-#contacto button {
-  width: 100%;
-  padding: 12px;
-  background: #1e2a38;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-#contacto button:hover {
-  background: #111a24;
-}
-
-/* IMÁGENES RESPONSIVAS Y ESTABLES */
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* HERO / BANNER */
-.hero img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  position: relative;
-}
-</style>
