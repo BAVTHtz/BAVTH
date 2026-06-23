@@ -19,7 +19,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 --blanco:#ffffff;
 }
 
-  /* ================= LOADER ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f5f5f5;
+color:#333;
+line-height:1.7;
+overflow-x:hidden;
+}
+
+/* ================= LOADER ================= */
 
 #loader{
 position:fixed;
@@ -41,27 +56,22 @@ transition:opacity 1s ease;
 width:180px;
 height:180px;
 object-fit:contain;
-background:transparent;
 animation:logoAnim 1.5s infinite;
 }
 
 @keyframes logoAnim{
-
 0%{
 transform:scale(.8);
 opacity:.5;
 }
-
 50%{
 transform:scale(1.05);
 opacity:1;
 }
-
 100%{
 transform:scale(1);
 opacity:.8;
 }
-
 }
 
 body.loaded #loader{
@@ -130,7 +140,6 @@ padding:120px 20px;
 width:280px;
 height:280px;
 object-fit:contain;
-background:transparent;
 margin-bottom:25px;
 filter:drop-shadow(0 10px 25px rgba(0,0,0,.45));
 }
@@ -164,6 +173,8 @@ border:1px solid #b08a18;
 background:var(--azul);
 color:white;
 }
+
+/* ================= GENERAL ================= */
 
 section{
 padding:100px 10%;
@@ -202,10 +213,41 @@ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
 }
 
+/* ================= TIMELINE ================= */
+
+.timeline{
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.timeline-item{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+border-left:5px solid var(--dorado);
+}
+
+.timeline-item h3{
+color:var(--azul);
+margin-bottom:10px;
+}
+
+.timeline-item img{
+width:100%;
+max-height:500px;
+object-fit:cover;
+border-radius:12px;
+margin-top:10px;
+}
+
 </style>
 </head>
 
 <body>
+
+<!-- ================= LOADER ================= -->
 
 <div id="loader">
 
@@ -217,6 +259,8 @@ Barra de Abogados del Valle de Tizayuca
 
 </div>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
 <nav>
@@ -226,12 +270,14 @@ Barra de Abogados del Valle de Tizayuca
 <a href="#circulares">Circulares</a>
 <a href="#calendario">Calendario</a>
 <a href="#tribunales">Tribunales</a>
-<a href="#galeria">Galería</a>
+<a href="#galeria">Actividades</a>
 <a href="#contacto">Contacto</a>
 
 </nav>
 
 </header>
+
+<!-- ================= INICIO ================= -->
 
 <section id="inicio" class="hero">
 
@@ -242,14 +288,16 @@ Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.
 </h1>
 
 <p>
-Comprometidos con la formación jurídica y el fortalecimiento del Estado de Derecho.
+Comprometidos con la formación jurídica, la actualización profesional y el fortalecimiento del Estado de Derecho.
 </p>
 
 <a href="#nosotros" class="btn">
 Conócenos
 </a>
 
-</section><!-- ===================== NOSOTROS ===================== -->
+</section>
+
+<!-- ================= NOSOTROS ================= -->
 
 <section id="nosotros">
 
@@ -261,13 +309,19 @@ Conócenos
 <div class="card">
 
 <p>
-La Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C., es una asociación civil integrada por profesionales del Derecho comprometidos con el fortalecimiento de la cultura jurídica, la promoción de la legalidad, la defensa del Estado de Derecho y el desarrollo profesional.
+La Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C., es una asociación civil integrada por profesionales del Derecho comprometidos con el fortalecimiento de la cultura jurídica, la promoción de la legalidad, la difusión del conocimiento jurídico y la defensa del Estado de Derecho.
 </p>
 
 <br>
 
 <p>
 Nuestra organización reúne abogados, juristas y especialistas de diversas ramas del Derecho, generando espacios de análisis, colaboración e intercambio de conocimientos para contribuir al perfeccionamiento de la práctica jurídica y al fortalecimiento de las instituciones.
+</p>
+
+<br>
+
+<p>
+Asimismo, buscamos acercar la justicia y el conocimiento jurídico al público en general, promoviendo una cultura de legalidad que permita que el Derecho y la justicia lleguen a todas las personas.
 </p>
 
 </div>
@@ -316,17 +370,13 @@ Trabajar para fortalecer la cultura jurídica y acercar el conocimiento del Dere
 </div>
 
 </section>
-
 <!-- ===================== CIRCULARES ===================== -->
 
 <section id="circulares">
 
 <h2>
-
 <i class="fas fa-bullhorn"></i>
-
 Circulares y Avisos
-
 </h2>
 
 <div class="cards">
@@ -334,17 +384,12 @@ Circulares y Avisos
 <div class="card">
 
 <h3>
-
 <i class="fas fa-gavel"></i>
-
 Tribunal Superior de Justicia del Estado de Hidalgo
-
 </h3>
 
 <p>
-
 Espacio destinado para publicar acuerdos, circulares, comunicados y avisos oficiales.
-
 </p>
 
 </div>
@@ -352,17 +397,12 @@ Espacio destinado para publicar acuerdos, circulares, comunicados y avisos ofici
 <div class="card">
 
 <h3>
-
 <i class="fas fa-building-columns"></i>
-
 Poder Judicial del Estado de México
-
 </h3>
 
 <p>
-
 Espacio destinado para publicar acuerdos, calendarios y disposiciones oficiales.
-
 </p>
 
 </div>
@@ -370,25 +410,18 @@ Espacio destinado para publicar acuerdos, calendarios y disposiciones oficiales.
 <div class="card">
 
 <h3>
-
 <i class="fas fa-graduation-cap"></i>
-
 Noticias de la Barra
-
 </h3>
 
 <p>
-
-Próximamente: Conferencia Jurídica organizada por la Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.
-
+Próximamente: Conferencias, cursos, actividades académicas y eventos organizados por la Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.
 </p>
 
 <br>
 
 <p>
-
-En breve se dará a conocer la fecha, sede, ponentes y programa del evento.
-
+Mantente atento a nuestras publicaciones para conocer fechas, sedes y programas.
 </p>
 
 </div>
@@ -402,37 +435,26 @@ En breve se dará a conocer la fecha, sede, ponentes y programa del evento.
 <section id="calendario">
 
 <h2>
-
 <i class="fas fa-calendar-days"></i>
-
 Calendario Oficial
-
 </h2>
 
 <div class="card" style="text-align:center;">
 
 <h3>
-
 <i class="fas fa-calendar-check"></i>
-
 Calendario Judicial
-
 </h3>
 
 <br>
 
 <p>
-
 Consulta el calendario oficial de labores y días inhábiles del Poder Judicial.
-
 </p>
 
 <a
-
 href="https://www.pjedomex.gob.mx/vista/32_horario_y_calendario_oficial"
-
 target="_blank"
-
 class="btn">
 
 Ver Calendario Oficial
@@ -469,16 +491,15 @@ object-fit:contain;
 
 </div>
 
-</section><!-- ===================== TRIBUNALES ===================== -->
+</section>
+
+<!-- ===================== TRIBUNALES ===================== -->
 
 <section id="tribunales">
 
 <h2>
-
 <i class="fas fa-scale-balanced"></i>
-
 Tribunales y Organismos Jurídicos
-
 </h2>
 
 <div class="cards">
@@ -494,7 +515,9 @@ Poder Judicial del Estado de Hidalgo
 href="https://www.pjhidalgo.gob.mx/"
 target="_blank"
 class="btn">
+
 Ingresar
+
 </a>
 
 </div>
@@ -510,7 +533,9 @@ Poder Judicial de la Ciudad de México
 href="https://poderjudicialcdmx.gob.mx/"
 target="_blank"
 class="btn">
+
 Ingresar
+
 </a>
 
 </div>
@@ -526,7 +551,9 @@ Poder Judicial del Estado de México
 href="https://www.pjedomex.gob.mx/vista/1_inicio"
 target="_blank"
 class="btn">
+
 Ingresar
+
 </a>
 
 </div>
@@ -542,7 +569,9 @@ Consulta de Datos de Expedientes OAJ
 href="https://www.oaj.gob.mx/micrositios/dggj/paginas/serviciosTramites.htm?pageName=servicios%2Fexpedientes.htm"
 target="_blank"
 class="btn">
+
 Consultar Expedientes
+
 </a>
 
 </div>
@@ -558,7 +587,9 @@ Instituto Registral del Estado de Hidalgo
 href="http://institutoregistral.hidalgo.gob.mx/"
 target="_blank"
 class="btn">
+
 IFREH Hidalgo
+
 </a>
 
 </div>
@@ -574,7 +605,9 @@ IFREM Estado de México
 href="https://ifrem.edomex.gob.mx/"
 target="_blank"
 class="btn">
+
 IFREM Estado de México
+
 </a>
 
 </div>
@@ -590,7 +623,9 @@ Suprema Corte de Justicia de la Nación
 href="https://www.scjn.gob.mx/"
 target="_blank"
 class="btn">
+
 Ingresar
+
 </a>
 
 </div>
@@ -606,7 +641,9 @@ Diario Oficial de la Federación
 href="https://www.dof.gob.mx/"
 target="_blank"
 class="btn">
+
 Consultar
+
 </a>
 
 </div>
@@ -614,109 +651,88 @@ Consultar
 </div>
 
 </section>
+<!-- ===================== ACTIVIDADES Y CONFERENCIAS ===================== -->
 
-<!-- ===================== GALERÍA ===================== -->
 <section id="galeria">
 
 <h2>
 <i class="fas fa-images"></i>
-Conferencias Jurídicas
+Historial de Actividades y Conferencias
 </h2>
 
 <div class="timeline">
 
-<!-- 1 -->
 <div class="timeline-item">
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-<div class="timeline-date">15/04/2026</div>
-
-<h3>Retos de la Abogacía ante la Reforma Judicial</h3>
-<p>Impartida por el Dr. Ciro Juárez González.</p>
-
-<img src="WhatsApp Image 2026-06-23 at 11.19.45 AM.jpeg">
-</div>
-</div>
-
-<!-- 2 -->
-<div class="timeline-item">
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-<div class="timeline-date">Perspectiva de Género e Interseccionalidad</div>
-
-<h3>Conferencia Jurídica</h3>
-<p>Impartida por la Dra. María Guadalupe Gómez Chavarín y la Dra. Violeta Sosa Zamora.</p>
-
-<img src="650047320_122166650984947773_557821829667716147_n.jpg">
-</div>
-</div>
-
-<!-- 3 -->
-<div class="timeline-item">
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-<div class="timeline-date">27/06/2025</div>
-
-<h3>Pensión Alimenticia en el Estado de Hidalgo</h3>
-<p>Impartida por la Lic. Leticia Pastor Rafael.</p>
-
-<img src="WhatsApp Image 2026-06-15 at 3.22.43 PM (1).jpeg">
-</div>
-</div>
-
-<!-- 4 -->
-<div class="timeline-item">
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-<div class="timeline-date">¿Qué jueces queremos?</div>
-
-<h3>Ética y función judicial</h3>
-<p>Impartida por la Dra. Ana María Ibarra Olguín.</p>
-
-<img src="WhatsApp Image 2026-06-23 at 11.07.13 AM.jpeg">
-</div>
-</div>
-
-<!-- 5 -->
-<div class="timeline-item">
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-<div class="timeline-date">21/03/2025</div>
-
-<h3>Criterios relevantes de la Suprema Corte</h3>
-<p>Impartida por la Dra. Violeta Sosa Zamora y el Lic. Sergio Daniel Martínez.</p>
-
+<h3>21/03/2025</h3>
+<p><strong>Conferencia:</strong> Criterios Relevantes de la Suprema Corte de Justicia de la Nación.</p>
+<p><strong>Impartida por:</strong> Dra. Violeta Sosa Zamora y Lic. Sergio Daniel Martínez.</p>
 <img src="WhatsApp Image 2026-06-22 at 3.16.52 PM.jpeg">
 </div>
-</div>
-  
-<!-- 6 -->
+
 <div class="timeline-item">
-  <h3>23/06/2025</h3>
+<h3>05/04/2025</h3>
+<p><strong>Conferencia:</strong> ¿Qué Jueces Queremos? ¿Qué Jueces Necesitamos?</p>
+<p><strong>Impartida por:</strong> Dra. Ana María Ibarra Olguín.</p>
+<img src="WhatsApp Image 2026-06-23 at 11.07.13 AM.jpeg">
+</div>
 
-  <p>
-    <b>Evento institucional:</b> BAVTH en RAN Hidalgo
-  </p>
+<div class="timeline-item">
+<h3>05/06/2025</h3>
+<p><strong>Conferencia:</strong> Prescripción Positiva y Negativa en el Estado de Hidalgo.</p>
+<p><strong>Impartida por:</strong> Xóchitl Mirella Piña Camacho.</p>
+<img src="WhatsApp Image 2026-06-23 at 11.10.36 AM.jpeg">
+</div>
 
-  <img src="517653142_122255781176140669_2056361342759283861_n.jpg">
+<div class="timeline-item">
+<h3>23/06/2025</h3>
+<p><strong>Actividad Institucional:</strong> Conferencia impartida por la BAVTH en RAN Hidalgo.</p>
+<img src="517653142_122255781176140669_2056361342759283861_n.jpg">
+</div>
+
+<div class="timeline-item">
+<h3>27/06/2025</h3>
+<p><strong>Conferencia:</strong> Pensión Alimenticia en el Estado de Hidalgo.</p>
+<p><strong>Impartida por:</strong> Lic. Leticia Pastor Rafael.</p>
+<img src="WhatsApp Image 2026-06-15 at 3.22.43 PM (1).jpeg">
+</div>
+
+<div class="timeline-item">
+<h3>09/03/2026</h3>
+<p><strong>Conferencia:</strong> Perspectiva de Género e Interseccionalidad.</p>
+<p><strong>Impartida por:</strong> Dra. María Guadalupe Gómez Chavarín y Dra. Violeta Sosa Zamora.</p>
+<img src="650047320_122166650984947773_557821829667716147_n.jpg">
+</div>
+
+<div class="timeline-item">
+<h3>15/04/2026</h3>
+<p><strong>Conferencia:</strong> Retos de la Abogacía ante la Reforma Judicial.</p>
+<p><strong>Impartida por:</strong> Dr. Ciro Juárez González.</p>
+<img src="WhatsApp Image 2026-06-23 at 11.19.45 AM.jpeg">
+</div>
+
+<div class="timeline-item">
+<h3>2026</h3>
+<p><strong>Primera Reunión Institucional</strong> con el H. Ayuntamiento de Tizayuca, Hidalgo.</p>
+<img src="WhatsApp Image 2026-06-23 at 10.53.46 AM.jpeg">
+</div>
+
+<div class="timeline-item">
+<h3>2026</h3>
+<p><strong>Segunda Reunión Institucional</strong> con el H. Ayuntamiento de Tizayuca, Hidalgo.</p>
+<img src="WhatsApp Image 2026-06-23 at 10.55.14 AM.jpeg">
+</div>
+
 </div>
 
 </section>
+
 <!-- ===================== REDES SOCIALES ===================== -->
 
 <section>
 
 <h2>
-
 <i class="fas fa-globe"></i>
-
 Redes Sociales
-
 </h2>
 
 <div class="cards">
@@ -751,16 +767,15 @@ Instagram
 
 </div>
 
-</section><!-- ===================== CONTACTO ===================== -->
+</section>
+
+<!-- ===================== CONTACTO ===================== -->
 
 <section id="contacto">
 
 <h2>
-
 <i class="fas fa-envelope"></i>
-
 Contacto
-
 </h2>
 
 <div class="card"
@@ -816,25 +831,17 @@ border:1px solid #ccc;
 <button
 type="submit"
 class="btn">
-
 Enviar Mensaje
-
 </button>
 
 </form>
 
 <br>
 
-<h3>
-
-Correo Institucional
-
-</h3>
+<h3>Correo Institucional</h3>
 
 <p>
-
 barradeabogadostizayuca@gmail.com
-
 </p>
 
 </div>
@@ -860,16 +867,12 @@ flex-wrap:wrap;
 gap:20px;
 ">
 
-<!-- CONTADOR IZQUIERDA -->
-
 <div>
 
 <img
 src="https://hitwebcounter.com/counter/counter.php?page=10485809&style=0006&nbdigits=6&type=page&initCount=0">
 
 </div>
-
-<!-- TEXTO CENTRO -->
 
 <div
 style="
@@ -878,30 +881,22 @@ text-align:center;
 ">
 
 <h3>
-
 Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.
-
 </h3>
 
 <p>
-
 Promoviendo la cultura jurídica, la legalidad y el fortalecimiento del Estado de Derecho.
-
 </p>
 
 <br>
 
 <p>
-
 © 2026 Todos los derechos reservados.
-
 </p>
 
 </div>
 
 </div>
-
-<!-- RELOJ -->
 
 <div
 id="reloj"
@@ -910,36 +905,25 @@ text-align:center;
 margin-top:20px;
 font-size:1rem;
 ">
-
 </div>
 
 </footer>
 
-<!-- ===================== JAVASCRIPT ===================== -->
-
 <script>
 
-/* LOADER */
-
 window.addEventListener("load", function(){
-
 document.body.classList.add("loaded");
-
 });
-
-/* RELOJ */
 
 function actualizarReloj(){
 
 const ahora = new Date();
 
 const fecha = ahora.toLocaleDateString('es-MX',{
-
 weekday:'long',
 year:'numeric',
 month:'long',
 day:'numeric'
-
 });
 
 const hora = ahora.toLocaleTimeString('es-MX');
@@ -950,7 +934,6 @@ document.getElementById('reloj').innerHTML =
 }
 
 setInterval(actualizarReloj,1000);
-
 actualizarReloj();
 
 </script>
