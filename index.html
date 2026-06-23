@@ -52,6 +52,59 @@ height:100%;
 object-fit:cover;
 display:block;
 }
+  /* ================= TIMELINE ================= */
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background: var(--dorado);
+  top: 0;
+  bottom: 0;
+  left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 60px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  background: var(--azul);
+  border: 3px solid var(--dorado);
+  border-radius: 50%;
+}
+
+.timeline-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.timeline-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: var(--dorado);
+  margin-bottom: 8px;
+}
 /* ================= LOADER ================= */
 
 #loader{
@@ -653,90 +706,79 @@ Consultar
 
 <h2>
 <i class="fas fa-images"></i>
-Galería Institucional
+Conferencias Jurídicas (Timeline)
 </h2>
 
-<div class="cards">
+<div class="timeline">
 
-<div class="card">
-<div class="card-img">
-<img src="517653142_122255781176140669_2056361342759283861_n.jpg">
+<!-- 1 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+<div class="timeline-date">15/04/2026</div>
+
+<h3>Retos de la Abogacía ante la Reforma Judicial</h3>
+<p>Impartida por el Dr. Ciro Juárez González.</p>
+
+<img src="WhatsApp Image 2026-06-23 at 11.19.45 AM.jpeg">
 </div>
-<p style="text-align:center;margin-top:10px;">
-Evento institucional / actividad de la Barra
-</p>
 </div>
 
-<div class="card">
-<div class="card-img">
+<!-- 2 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+<div class="timeline-date">Perspectiva de Género e Interseccionalidad</div>
+
+<h3>Conferencia Jurídica</h3>
+<p>Impartida por la Dra. María Guadalupe Gómez Chavarín y la Dra. Violeta Sosa Zamora.</p>
+
 <img src="650047320_122166650984947773_557821829667716147_n.jpg">
 </div>
-<p style="text-align:center;margin-top:10px;">
-Actividad institucional de la Barra de Abogados
-</p>
 </div>
 
-<div class="card">
-<div class="card-img">
-<img src="WhatsApp Image 2026-04-15 at 6.27.05 PM.jpeg">
-</div>
-<p style="text-align:center;margin-top:10px;">
-Conferencia jurídica 2026
-</p>
-</div>
+<!-- 3 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
 
-<div class="card">
-<div class="card-img">
-<img src="WhatsApp Image 2026-06-15 at 3.18.11 PM.jpeg">
-</div>
-<p style="text-align:center;margin-top:10px;">
-Actividad académica y jurídica
-</p>
-</div>
+<div class="timeline-card">
+<div class="timeline-date">27/06/2025</div>
 
-<div class="card">
-<div class="card-img">
-<img src="WhatsApp Image 2026-06-15 at 3.22.42 PM.jpeg">
-</div>
-<p style="text-align:center;margin-top:10px;">
-Evento institucional
-</p>
-</div>
+<h3>Pensión Alimenticia en el Estado de Hidalgo</h3>
+<p>Impartida por la Lic. Leticia Pastor Rafael.</p>
 
-<div class="card">
-<div class="card-img">
-<img src="WhatsApp Image 2026-06-15 at 3.22.42 PM (1).jpeg">
-</div>
-<p style="text-align:center;margin-top:10px;">
-Evento institucional
-</p>
-</div>
-
-<div class="card">
-<div class="card-img">
 <img src="WhatsApp Image 2026-06-15 at 3.22.43 PM (1).jpeg">
 </div>
-<p style="text-align:center;margin-top:10px;">
-Actividad jurídica
-</p>
 </div>
 
-<div class="card">
-<div class="card-img">
-<img src="WhatsApp Image 2026-06-15 at 3.22.43 PM (2).jpeg">
+<!-- 4 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+<div class="timeline-date">¿Qué jueces queremos?</div>
+
+<h3>Ética y función judicial</h3>
+<p>Impartida por la Dra. Ana María Ibarra Olguín.</p>
+
+<img src="WhatsApp Image 2026-06-23 at 11.07.13 AM.jpeg">
 </div>
-<p style="text-align:center;margin-top:10px;">
-Actividad jurídica
-</p>
 </div>
 
-<div class="card">
-<div class="card-img">
-<img src="WhatsApp Image 2026-06-17 at 11.45.30 AM.jpeg">
+<!-- 5 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+<div class="timeline-date">21/03/2025</div>
+
+<h3>Criterios relevantes de la Suprema Corte</h3>
+<p>Impartida por la Dra. Violeta Sosa Zamora y el Lic. Sergio Daniel Martínez.</p>
+
+<img src="WhatsApp Image 2026-06-22 at 3.16.52 PM.jpeg">
 </div>
-<p style="text-align:center;margin-top:10px;">
-Perspectiva de género e interseccionalidad
-</p>
 </div>
 
 </div>
