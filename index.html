@@ -12,6 +12,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <style>
 
+<style>
+
 :root{
 --azul:#0B1F3A;
 --dorado:#C9A227;
@@ -19,93 +21,109 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 --blanco:#ffffff;
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial, Helvetica, sans-serif;
-background:#f5f5f5;
-color:#333;
-line-height:1.7;
-overflow-x:hidden;
-}
-
-/* ===== IMÁGENES GALERÍA ===== */
-.card-img{
-width:100%;
-height:220px;
-overflow:hidden;
-border-radius:12px;
+.timeline{
 display:flex;
-align-items:center;
-justify-content:center;
-background:#eee;
+flex-direction:column;
+gap:25px;
 }
 
-.card-img img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
+.timeline-item{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+border-left:5px solid var(--dorado);
 }
+
+.timeline-item h3{
+color:var(--azul);
+margin-bottom:10px;
+}
+
+.timeline-item img{
+width:100%;
+max-height:350px;
+object-fit:cover;
+border-radius:12px;
+margin-top:10px;
+}
+
+</style>
   /* ================= TIMELINE ================= */
 
-.timeline {
-  position: relative;
-  max-width: 900px;
-  margin: auto;
-}
+<section id="galeria">
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  width: 4px;
-  background: var(--dorado);
-  top: 0;
-  bottom: 0;
-  left: 20px;
-}
+<h2>
+<i class="fas fa-timeline"></i>
+Historial de Actividades y Conferencias
+</h2>
 
-.timeline-item {
-  position: relative;
-  margin: 40px 0;
-  padding-left: 60px;
-}
+<div class="timeline">
 
-.timeline-dot {
-  position: absolute;
-  left: 12px;
-  top: 10px;
-  width: 18px;
-  height: 18px;
-  background: var(--azul);
-  border: 3px solid var(--dorado);
-  border-radius: 50%;
-}
+<div class="timeline-item">
+<h3>21/03/2025</h3>
+<p><b>Conferencia:</b> Criterios relevantes de la Suprema Corte de Justicia de la Nación</p>
+<p><b>Impartida por:</b> Dra. Violeta Sosa Zamora y Lic. Sergio Daniel Martínez</p>
+<img src="WhatsApp Image 2026-06-22 at 3.16.52 PM.jpeg">
+</div>
 
-.timeline-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,.08);
-}
+<div class="timeline-item">
+<h3>05/04/2025</h3>
+<p><b>Conferencia:</b> ¿Qué jueces queremos? ¿Qué jueces necesitamos?</p>
+<p><b>Impartida por:</b> Dra. Ana María Ibarra Olguín</p>
+<img src="WhatsApp Image 2026-06-23 at 11.07.13 AM.jpeg">
+</div>
 
-.timeline-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
-}
+<div class="timeline-item">
+<h3>05/06/2025</h3>
+<p><b>Conferencia:</b> Prescripción positiva y negativa en el Estado de Hidalgo</p>
+<p><b>Impartida por:</b> Xóchitl Mirella Piña Camacho</p>
+<img src="WhatsApp Image 2026-06-23 at 11.10.36 AM.jpeg">
+</div>
 
-.timeline-date {
-  font-weight: bold;
-  color: var(--dorado);
-  margin-bottom: 8px;
-}
-/* ================= LOADER ================= */
+<div class="timeline-item">
+<h3>27/06/2025</h3>
+<p><b>Conferencia:</b> Pensión alimenticia en el Estado de Hidalgo</p>
+<p><b>Impartida por:</b> Lic. Leticia Pastor Rafael</p>
+<img src="WhatsApp Image 2026-06-15 at 3.22.43 PM (1).jpeg">
+</div>
+
+<div class="timeline-item">
+<h3>09/03/2026</h3>
+<p><b>Conferencia:</b> Perspectiva de género e interseccionalidad</p>
+<p><b>Impartida por:</b> Dra. María Guadalupe Gómez Chavarrín y Dra. Violeta Sosa Zamora</p>
+<img src="650047320_122166650984947773_557821829667716147_n.jpg">
+</div>
+
+<div class="timeline-item">
+<h3>15/04/2026</h3>
+<p><b>Conferencia:</b> Retos de la Abogacía ante la Reforma Judicial</p>
+<p><b>Impartida por:</b> Dr. Ciro Juárez González</p>
+<img src="WhatsApp Image 2026-06-23 at 11.19.45 AM.jpeg">
+</div>
+
+<div class="timeline-item">
+<h3>2026</h3>
+<p><b>Reunión:</b> 1ra reunión con el H. Ayuntamiento de Tizayuca</p>
+<img src="WhatsApp Image 2026-06-23 at 10.53.46 AM.jpeg">
+</div>
+
+<div class="timeline-item">
+<h3>2026</h3>
+<p><b>Reunión:</b> 2da reunión con el H. Ayuntamiento de Tizayuca</p>
+<img src="WhatsApp Image 2026-06-23 at 10.55.14 AM.jpeg">
+</div>
+
+<div class="timeline-item">
+<h3>Actividad institucional</h3>
+<p><b>Evento BAVTH / Rancho Hidalgo</b></p>
+<img src="517653142_122255781176140669_2056361342759283861_n.jpg">
+</div>
+
+</div>
+
+</section>
+  /* ================= LOADER ================= */
 
 #loader{
 position:fixed;
