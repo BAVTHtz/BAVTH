@@ -234,90 +234,12 @@ color:var(--azul);
 margin-bottom:10px;
 }
 
-/* ================= IMÁGENES GLOBAL ================= */
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-/* Evita desbordes en móviles */
-section img{
-  max-width:100%;
-}
-
-/* ================= IMÁGENES UNIFORMES ================= */
-
-.card img,
 .timeline-item img{
-  width:100%;
-  height:320px;              /* tamaño fijo uniforme */
-  object-fit:contain;        /* 🔵 NO recorta */
-  background:#f5f5f5;        /* fondo tipo institucional */
-  border-radius:12px;
-  padding:8px;
-  transition:transform .6s ease, box-shadow .6s ease;
-}
-
-/* ================= HOVER SUAVE ================= */
-
-.card img:hover,
-.timeline-item img:hover{
-  transform:scale(1.02);
-  box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-/* ================= TIMELINE PROFESIONAL ================= */
-
-.timeline{
-  display:flex;
-  flex-direction:column;
-  gap:30px;
-  position:relative;
-}
-
-/* línea central */
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:20px;
-  top:0;
-  bottom:0;
-  width:3px;
-  background:var(--dorado);
-}
-
-/* tarjeta timeline */
-.timeline-item{
-  position:relative;
-  background:white;
-  padding:20px 20px 20px 50px;
-  border-radius:15px;
-  box-shadow:0 5px 15px rgba(0,0,0,.08);
-
-  /* 🔵 animación scroll */
-  opacity:0;
-  transform:translateY(40px);
-  transition:all .8s ease;
-}
-
-/* aparece al hacer scroll */
-.timeline-item.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* punto tipo tribunal */
-.timeline-item::before{
-  content:"";
-  position:absolute;
-  left:12px;
-  top:25px;
-  width:16px;
-  height:16px;
-  background:var(--azul);
-  border:3px solid var(--dorado);
-  border-radius:50%;
+width:100%;
+max-height:500px;
+object-fit:cover;
+border-radius:12px;
+margin-top:10px;
 }
 
 </style>
