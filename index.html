@@ -90,7 +90,7 @@ nav a:hover{
     margin-top:20px;
 }
 
-/* ================= BOTONES ================= */
+/* ================= BOTÓN ================= */
 
 .btn{
     display:inline-block;
@@ -130,102 +130,84 @@ h2{
     box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-/* ================= TIMELINE PRO ================= */
+/* ================= TIMELINE (CORREGIDO) ================= */
 
 .timeline{
-    position:relative;
-    max-width:1100px;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    max-width:1000px;
     margin:auto;
 }
 
-.timeline::before{
-    content:"";
-    position:absolute;
-    width:4px;
-    background:var(--dorado);
-    top:0;
-    bottom:0;
-    left:50%;
-    transform:translateX(-50%);
-}
-
 .timeline-item{
-    position:relative;
-    width:50%;
-    padding:20px;
-    opacity:0;
-    transform:translateY(40px);
-    transition:.6s;
-}
-
-.timeline-item.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-.timeline-item.left{
-    left:0;
-    text-align:right;
-}
-
-.timeline-item.right{
-    left:50%;
-}
-
-.timeline-item::before{
-    content:"";
-    position:absolute;
-    width:16px;
-    height:16px;
-    background:var(--dorado);
-    border:3px solid var(--azul);
-    border-radius:50%;
-    top:25px;
-}
-
-.timeline-item.left::before{
-    right:-10px;
-}
-
-.timeline-item.right::before{
-    left:-10px;
-}
-
-.timeline-item .content{
     background:white;
     padding:20px;
-    border-radius:12px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    border-left:5px solid var(--dorado);
+}
+
+.timeline-item h3{
+    color:var(--azul);
+    margin-bottom:10px;
 }
 
 .timeline-item img{
     width:100%;
-    max-height:400px;
+    max-height:500px;
     object-fit:contain;
+    border-radius:12px;
     margin-top:10px;
+}
+
+/* ================= CONTACTO ================= */
+
+#contacto .card{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:var(--azul);
+    color:white;
+    padding:30px 20px;
+    margin-top:60px;
 }
 
 /* ================= RESPONSIVE ================= */
 
 @media(max-width:768px){
-
-.timeline::before{left:10px;}
-
-.timeline-item{
-    width:100%;
-    left:0 !important;
-    text-align:left;
-    padding-left:40px;
+    .hero h1{font-size:1.7rem;}
+    section{padding:70px 5%;}
 }
 
-.timeline-item::before{
-    left:0;
+img{
+    max-width:100%;
 }
 
-.hero h1{font-size:1.7rem;}
+body, html{
+    overflow-x:hidden;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -236,6 +218,7 @@ h2{
 <a href="#inicio">Inicio</a>
 <a href="#nosotros">Nosotros</a>
 <a href="#circulares">Circulares</a>
+<a href="#calendario">Calendario</a>
 <a href="#tribunales">Tribunales</a>
 <a href="#galeria">Actividades</a>
 <a href="#contacto">Contacto</a>
@@ -249,36 +232,29 @@ h2{
 <a class="btn" href="#nosotros">Conócenos</a>
 </section>
 
-<!-- ================= NOSOTROS ================= -->
-<section id="nosotros">
-<h2>¿Quiénes Somos?</h2>
-
-<div class="card">
-<p>Somos una asociación civil de abogados dedicada al fortalecimiento del Estado de Derecho...</p>
-</div>
-</section>
-
-<!-- ================= TIMELINE ================= -->
+<!-- ================= GALERÍA / TIMELINE ================= -->
 <section id="galeria">
 
-<h2>Actividades y Conferencias</h2>
+<h2>Historial de Actividades</h2>
 
 <div class="timeline">
 
-<div class="timeline-item left">
-<div class="content">
+<div class="timeline-item">
 <h3>21/03/2025</h3>
 <p>Criterios de la SCJN</p>
-<img src="img1.jpeg">
-</div>
+<img src="WhatsApp Image 2026-06-22 at 3.16.52 PM.jpeg">
 </div>
 
-<div class="timeline-item right">
-<div class="content">
+<div class="timeline-item">
 <h3>05/04/2025</h3>
 <p>¿Qué jueces queremos?</p>
-<img src="img2.jpeg">
+<img src="WhatsApp Image 2026-06-23 at 11.07.13 AM.jpeg">
 </div>
+
+<div class="timeline-item">
+<h3>05/06/2025</h3>
+<p>Prescripción en Hidalgo</p>
+<img src="WhatsApp Image 2026-06-23 at 11.10.36 AM.jpeg">
 </div>
 
 </div>
@@ -300,22 +276,12 @@ h2{
 
 </section>
 
-<!-- ================= JS ANIMACIÓN ================= -->
-<script>
-
-const items = document.querySelectorAll(".timeline-item");
-
-const observer = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-        if(e.isIntersecting){
-            e.target.classList.add("show");
-        }
-    });
-},{threshold:0.2});
-
-items.forEach(el=>observer.observe(el));
-
-</script>
+<!-- ================= FOOTER ================= -->
+<footer>
+<p style="text-align:center;">
+Barra de Abogados del Valle de Tizayuca © 2026
+</p>
+</footer>
 
 </body>
 </html>
