@@ -4,7 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>
 Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.
@@ -81,6 +83,7 @@ position:sticky;
 top:0;
 z-index:999;
 border-bottom:3px solid var(--dorado);
+box-shadow:0 5px 20px rgba(0,0,0,.25);
 }
 
 nav{
@@ -95,6 +98,7 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:bold;
+transition:.3s;
 }
 
 nav a:hover{
@@ -125,43 +129,83 @@ width:280px;
 height:280px;
 object-fit:contain;
 margin-bottom:25px;
+filter:drop-shadow(0 10px 25px rgba(0,0,0,.45));
 }
 
 .hero h1{
-color:var(--dorado);
 font-size:2.5rem;
+color:var(--dorado);
+max-width:1100px;
+}
+
+.hero p{
+margin-top:20px;
+max-width:900px;
+font-size:1.1rem;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+background:linear-gradient(135deg,#C9A227,#e5c65a);
+color:#111;
+font-weight:bold;
+text-decoration:none;
+border-radius:8px;
+transition:.3s;
+border:1px solid #b08a18;
+}
+
+.btn:hover{
+background:var(--azul);
+color:white;
 }
 
 /* ================= GENERAL ================= */
 
 section{
-padding:90px 10%;
+padding:100px 10%;
 }
 
 h2{
 text-align:center;
 color:var(--azul);
-margin-bottom:50px;
+font-size:2rem;
+margin-bottom:60px;
+position:relative;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
+h2::after{
+content:"";
+width:80px;
+height:3px;
+background:var(--dorado);
+position:absolute;
+bottom:-15px;
+left:50%;
+transform:translateX(-50%);
 }
 
 .card{
 background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+margin-bottom:20px;
 }
 
-/* ================= CENTRO DE CONSULTA ================= */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+/* ================= CENTRO DE CONSULTA JURÍDICA ================= */
 
 .consulta-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:15px;
 }
 
@@ -184,7 +228,7 @@ color:var(--azul);
 font-weight:bold;
 }
 
-/* ================= TIMELINE ================= */
+/* ================= TIMELINE MODERNO ================= */
 
 .timeline{
 position:relative;
@@ -217,8 +261,15 @@ opacity:1;
 transform:translateY(0);
 }
 
-.timeline-item.left{left:0;text-align:right;}
-.timeline-item.right{left:50%;text-align:left;}
+.timeline-item.left{
+left:0;
+text-align:right;
+}
+
+.timeline-item.right{
+left:50%;
+text-align:left;
+}
 
 .timeline-item::before{
 content:"";
@@ -231,8 +282,13 @@ border-radius:50%;
 top:25px;
 }
 
-.timeline-item.left::before{right:-10px;}
-.timeline-item.right::before{left:-10px;}
+.timeline-item.left::before{
+right:-10px;
+}
+
+.timeline-item.right::before{
+left:-10px;
+}
 
 .timeline-content{
 background:white;
@@ -251,7 +307,6 @@ border-radius:12px;
 border:1px solid #ddd;
 }
 
-/* RESPONSIVE */
 @media(max-width:900px){
 .timeline::after{left:10px;}
 .timeline-item{
@@ -262,114 +317,662 @@ padding-left:50px;
 }
 .timeline-item::before{left:0;}
 }
-
-</style>
-
-</head>
-
 <body>
 
-<!-- LOADER -->
+<!-- ================= LOADER ================= -->
+
 <div id="loader">
-<img src="LOGO_BARRA-removebg-preview.png" class="loader-logo">
+
+<img
+src="LOGO_BARRA-removebg-preview.png"
+class="loader-logo">
+
+<h2>
+Barra de Abogados del Valle de Tizayuca
+</h2>
+
 </div>
 
+<!-- ================= HEADER ================= -->
+
 <header>
+
 <nav>
+
 <a href="#inicio">Inicio</a>
+
 <a href="#nosotros">Nosotros</a>
-<a href="#consulta">Consulta Jurídica</a>
+
+<a href="#consulta">Centro de Consulta</a>
+
 <a href="#circulares">Circulares</a>
+
 <a href="#calendario">Calendario</a>
+
 <a href="#galeria">Actividades</a>
+
 <a href="#contacto">Contacto</a>
+
 </nav>
+
 </header>
 
-<!-- HERO -->
+<!-- ================= INICIO ================= -->
+
 <section id="inicio" class="hero">
-<img src="LOGO_BARRA-removebg-preview.png" class="logo">
-<h1>Barra de Abogados del Valle de Tizayuca</h1>
+
+<img
+src="LOGO_BARRA-removebg-preview.png"
+class="logo">
+
+<h1>
+Barra de Abogados del Valle de Tizayuca,
+Estado de Hidalgo, A.C.
+</h1>
+
+<p>
+Comprometidos con la formación jurídica,
+la actualización profesional y el fortalecimiento
+del Estado de Derecho.
+</p>
+
+<a href="#nosotros" class="btn">
+Conócenos
+</a>
+
+</section>
+  <!-- ================= NOSOTROS ================= -->
+
+<section id="nosotros">
+
+<h2>
+<i class="fas fa-scale-balanced"></i>
+¿Quiénes Somos?
+</h2>
+
+<div class="card">
+
+<p>
+La Barra de Abogados del Valle de Tizayuca,
+Estado de Hidalgo, A.C., es una asociación civil
+integrada por profesionales del Derecho comprometidos
+con el fortalecimiento de la cultura jurídica,
+la promoción de la legalidad,
+la difusión del conocimiento jurídico
+y la defensa del Estado de Derecho.
+</p>
+
+<br>
+
+<p>
+Nuestra organización reúne abogados,
+juristas y especialistas de diversas ramas del Derecho,
+generando espacios de análisis,
+colaboración e intercambio de conocimientos
+para contribuir al perfeccionamiento
+de la práctica jurídica
+y al fortalecimiento de las instituciones.
+</p>
+
+<br>
+
+<p>
+Asimismo,
+buscamos acercar la justicia
+y el conocimiento jurídico
+al público en general,
+promoviendo una cultura de legalidad
+que permita que el Derecho
+y la justicia lleguen a todas las personas.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3><i class="fas fa-bullseye"></i> Misión</h3>
+<p>
+Promover la excelencia profesional,
+la actualización permanente,
+la ética jurídica
+y la participación activa
+de los profesionales del Derecho.
+</p>
+</div>
+
+<div class="card">
+<h3><i class="fas fa-landmark"></i> Visión</h3>
+<p>
+Ser una organización jurídica
+reconocida por su liderazgo,
+compromiso social
+y aportación al fortalecimiento
+del Estado de Derecho.
+</p>
+</div>
+
+<div class="card">
+<h3><i class="fas fa-handshake"></i> Compromiso</h3>
+<p>
+Trabajar para fortalecer
+la cultura jurídica
+y acercar el conocimiento
+del Derecho a la sociedad.
+</p>
+</div>
+
+</div>
+
 </section>
 
-<!-- CENTRO DE CONSULTA -->
+<!-- ================= CENTRO DE CONSULTA JURÍDICA ================= -->
+
 <section id="consulta">
+
 <h2>Centro de Consulta Jurídica</h2>
 
 <div class="consulta-grid">
 
-<div class="consulta-item"><a href="https://www.pjhidalgo.gob.mx">Poder Judicial Hidalgo</a></div>
-<div class="consulta-item"><a href="https://www.poderjudicialcdmx.gob.mx">Poder Judicial CDMX</a></div>
-<div class="consulta-item"><a href="https://www.pjedomex.gob.mx">Poder Judicial Edomex</a></div>
-<div class="consulta-item"><a href="https://www.oaj.gob.mx">OAJ</a></div>
-<div class="consulta-item"><a href="https://ius.scjn.gob.mx">IUS</a></div>
-<div class="consulta-item"><a href="https://www.dof.gob.mx">DOF</a></div>
-<div class="consulta-item"><a href="https://www.diputados.gob.mx">Cámara de Diputados</a></div>
-<div class="consulta-item"><a href="https://www.scjn.gob.mx">SCJN</a></div>
-<div class="consulta-item"><a href="https://www.sat.gob.mx">SAT</a></div>
+<div class="consulta-item"><a href="https://www.pjhidalgo.gob.mx" target="_blank">Poder Judicial del Estado de Hidalgo</a></div>
+
+<div class="consulta-item"><a href="https://www.poderjudicialcdmx.gob.mx" target="_blank">Poder Judicial de la Ciudad de México</a></div>
+
+<div class="consulta-item"><a href="https://www.pjedomex.gob.mx" target="_blank">Poder Judicial del Estado de México</a></div>
+
+<div class="consulta-item"><a href="https://www.oaj.gob.mx" target="_blank">Órgano de Administración Judicial (OAJ)</a></div>
+
+<div class="consulta-item"><a href="https://ius.scjn.gob.mx" target="_blank">Buscador Jurídico (IUS)</a></div>
+
+<div class="consulta-item"><a href="https://www.dof.gob.mx" target="_blank">Diario Oficial de la Federación</a></div>
+
+<div class="consulta-item"><a href="https://www.diputados.gob.mx" target="_blank">Cámara de Diputados</a></div>
+
+<div class="consulta-item"><a href="https://www.scjn.gob.mx" target="_blank">Suprema Corte de Justicia de la Nación</a></div>
+
+<div class="consulta-item"><a href="https://www.sat.gob.mx" target="_blank">Servicio de Administración Tributaria (SAT)</a></div>
+
+<div class="consulta-item"><a href="https://www.rpphidalgo.gob.mx" target="_blank">Instituto Registral del Estado de Hidalgo</a></div>
 
 </div>
+
 </section>
 
-<!-- NOSOTROS -->
-<section id="nosotros">
-<h2>¿Quiénes Somos?</h2>
-<div class="card">
-<p>Contenido original intacto...</p>
-</div>
-</section>
+<!-- ================= TARJETAS INSTITUCIONALES ================= -->
 
-<!-- CIRCULARES -->
-<section id="circulares">
-<h2>Circulares y Avisos</h2>
+<section>
+
+<h2>
+<i class="fas fa-building-columns"></i>
+Instituciones Jurídicas
+</h2>
+
 <div class="cards">
-<div class="card">Contenido original intacto...</div>
-</div>
-</section>
 
-<!-- CALENDARIO -->
-<section id="calendario">
-<h2>Calendario Oficial</h2>
 <div class="card">
-Contenido original intacto...
+<h3>Poder Judicial del Estado de Hidalgo</h3>
+<p>Consulta resoluciones, trámites y servicios judiciales del estado.</p>
 </div>
+
+<div class="card">
+<h3>Poder Judicial de la Ciudad de México</h3>
+<p>Información de tribunales, juzgados y servicios digitales.</p>
+</div>
+
+<div class="card">
+<h3>Poder Judicial del Estado de México</h3>
+<p>Acceso a expedientes, acuerdos y servicios judiciales.</p>
+</div>
+
+<div class="card">
+<h3>Órgano de Administración Judicial (OAJ)</h3>
+<p>Administración y organización del sistema judicial.</p>
+</div>
+
+<div class="card">
+<h3>Buscador Jurídico IUS</h3>
+<p>Consulta de jurisprudencia y tesis de la SCJN.</p>
+</div>
+
+<div class="card">
+<h3>Diario Oficial de la Federación</h3>
+<p>Publicación de leyes, decretos y reformas oficiales.</p>
+</div>
+
+<div class="card">
+<h3>Cámara de Diputados</h3>
+<p>Consulta de iniciativas y leyes federales.</p>
+</div>
+
+<div class="card">
+<h3>Suprema Corte de Justicia de la Nación</h3>
+<p>Máximo tribunal constitucional de México.</p>
+</div>
+
+<div class="card">
+<h3>Servicio de Administración Tributaria (SAT)</h3>
+<p>Trámites fiscales y obligaciones tributarias.</p>
+</div>
+
+<div class="card">
+<h3>Instituto Registral del Estado de Hidalgo</h3>
+<p>Registro público de la propiedad y comercio.</p>
+</div>
+
+</div>
+
+</section>
+  <!-- ================= CIRCULARES ================= -->
+
+<section id="circulares">
+
+<h2>
+<i class="fas fa-bullhorn"></i>
+Circulares y Avisos
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+<i class="fas fa-gavel"></i>
+Tribunal Superior de Justicia del Estado de Hidalgo
+</h3>
+
+<p>
+Espacio destinado para publicar acuerdos,
+circulares, comunicados y avisos oficiales.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+<i class="fas fa-building-columns"></i>
+Poder Judicial del Estado de México
+</h3>
+
+<p>
+Espacio destinado para publicar acuerdos,
+calendarios y disposiciones oficiales.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+<i class="fas fa-graduation-cap"></i>
+Noticias de la Barra
+</h3>
+
+<p>
+Próximamente: Conferencias, cursos,
+actividades académicas y eventos
+organizados por la Barra de Abogados
+del Valle de Tizayuca, Estado de Hidalgo, A.C.
+</p>
+
+<br>
+
+<p>
+Mantente atento a nuestras publicaciones
+para conocer fechas, sedes y programas.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- TIMELINE -->
+<!-- ================= CALENDARIO ================= -->
+
+<section id="calendario">
+
+<h2>
+<i class="fas fa-calendar-days"></i>
+Calendario Oficial
+</h2>
+
+<div class="card" style="text-align:center;">
+
+<h3>
+<i class="fas fa-calendar-check"></i>
+Calendario Judicial
+</h3>
+
+<br>
+
+<p>
+Consulta el calendario oficial
+de labores y días inhábiles
+del Poder Judicial.
+</p>
+
+<a href="https://www.pjedomex.gob.mx/vista/32_horario_y_calendario_oficial"
+target="_blank" class="btn">
+
+Ver Calendario Oficial
+
+</a>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<img src="Calendario_2026_PJCDMX.jpg"
+style="width:100%;border-radius:12px;object-fit:contain;">
+</div>
+
+<div class="card">
+<img src="WhatsApp Image 2026-06-17 at 11.46.26 AM.jpeg"
+style="width:100%;border-radius:12px;object-fit:contain;">
+</div>
+
+</div>
+
+</section>
+  
+</style>
+
+</head>
+<!-- ===================== ACTIVIDADES Y CONFERENCIAS ===================== -->
+
 <section id="galeria">
 
-<h2>Historial de Actividades y Conferencias</h2>
+<h2>
+<i class="fas fa-images"></i>
+Historial de Actividades y Conferencias
+</h2>
 
 <div class="timeline">
 
-<!-- TODOS TUS EVENTOS ORIGINALES YA INTEGRADOS -->
-<!-- (los mantuve en versión anterior completa, aquí ya van dentro del layout correcto) -->
+<!-- ITEM 1 -->
+<div class="timeline-item left">
+<div class="timeline-content">
+
+<h3>21/03/2025</h3>
+<p><strong>Conferencia:</strong> Criterios Relevantes de la SCJN.</p>
+<p><strong>Impartida por:</strong> Violeta Sosa Zamora y Sergio Daniel Martínez.</p>
+<img src="WhatsApp Image 2026-06-22 at 3.16.52 PM.jpeg">
+
+</div>
+</div>
+
+<!-- ITEM 2 -->
+<div class="timeline-item right">
+<div class="timeline-content">
+
+<h3>05/04/2025</h3>
+<p><strong>Conferencia:</strong> ¿Qué Jueces Queremos?</p>
+<p><strong>Impartida por:</strong> Ana María Ibarra Olguín.</p>
+<img src="WhatsApp Image 2026-06-23 at 11.07.13 AM.jpeg">
+
+</div>
+</div>
+
+<!-- ITEM 3 -->
+<div class="timeline-item left">
+<div class="timeline-content">
+
+<h3>05/06/2025</h3>
+<p><strong>Conferencia:</strong> Prescripción en el Estado de Hidalgo.</p>
+<p><strong>Impartida por:</strong> Xóchitl Piña Camacho.</p>
+<img src="WhatsApp Image 2026-06-23 at 11.10.36 AM.jpeg">
+
+</div>
+</div>
+
+<!-- ITEM 4 -->
+<div class="timeline-item right">
+<div class="timeline-content">
+
+<h3>23/06/2025</h3>
+<p><strong>Actividad:</strong> Conferencia BAVTH en RAN Hidalgo.</p>
+<img src="517653142_122255781176140669_2056361342759283861_n.jpg">
+
+</div>
+</div>
+
+<!-- ITEM 5 -->
+<div class="timeline-item left">
+<div class="timeline-content">
+
+<h3>27/06/2025</h3>
+<p><strong>Conferencia:</strong> Pensión Alimenticia.</p>
+<p><strong>Impartida por:</strong> Leticia Pastor Rafael.</p>
+<img src="WhatsApp Image 2026-06-15 at 3.22.43 PM (1).jpeg">
+
+</div>
+</div>
+
+<!-- ITEM 6 -->
+<div class="timeline-item right">
+<div class="timeline-content">
+
+<h3>09/03/2026</h3>
+<p><strong>Conferencia:</strong> Perspectiva de Género e Interseccionalidad.</p>
+<p><strong>Impartida por:</strong> María Guadalupe Gómez Chavarín y Violeta Sosa Zamora.</p>
+<img src="650047320_122166650984947773_557821829667716147_n.jpg">
+
+</div>
+</div>
+
+<!-- ITEM 7 -->
+<div class="timeline-item left">
+<div class="timeline-content">
+
+<h3>15/04/2026</h3>
+<p><strong>Conferencia:</strong> Reforma Judicial.</p>
+<p><strong>Impartida por:</strong> Ciro Juárez González.</p>
+<img src="WhatsApp Image 2026-06-23 at 11.19.45 AM.jpeg">
+
+</div>
+</div>
+
+<!-- ITEM 8 -->
+<div class="timeline-item right">
+<div class="timeline-content">
+
+<h3>2026</h3>
+<p><strong>Primera Reunión Institucional</strong> con el H. Ayuntamiento de Tizayuca.</p>
+<img src="WhatsApp Image 2026-06-23 at 10.53.46 AM.jpeg">
+
+</div>
+</div>
+
+<!-- ITEM 9 -->
+<div class="timeline-item left">
+<div class="timeline-content">
+
+<h3>2026</h3>
+<p><strong>Segunda Reunión Institucional</strong> con el H. Ayuntamiento de Tizayuca.</p>
+<img src="WhatsApp Image 2026-06-23 at 10.55.14 AM.jpeg">
+
+</div>
+</div>
 
 </div>
 
 </section>
 
+<!-- ===================== ANIMACIÓN TIMELINE ===================== -->
+
 <script>
 
-// LOADER
-window.addEventListener("load",()=>{
-document.body.classList.add("loaded");
-});
-
-// TIMELINE ANIMATION
-const items=document.querySelectorAll(".timeline-item");
+const items = document.querySelectorAll(".timeline-item");
 
 function mostrarTimeline(){
 items.forEach(item=>{
-const rect=item.getBoundingClientRect();
+const rect = item.getBoundingClientRect();
 if(rect.top < window.innerHeight - 100){
 item.classList.add("show");
 }
 });
 }
 
-window.addEventListener("scroll",mostrarTimeline);
+window.addEventListener("scroll", mostrarTimeline);
 mostrarTimeline();
+
+</script>
+<!-- ===================== REDES SOCIALES ===================== -->
+
+<section>
+
+<h2>
+<i class="fas fa-globe"></i>
+Redes Sociales
+</h2>
+
+<div class="cards">
+
+<div class="card" style="text-align:center;">
+
+<a
+href="https://www.facebook.com/share/17pQSZRdxd/"
+target="_blank"
+class="btn">
+
+<i class="fab fa-facebook"></i>
+Facebook
+
+</a>
+
+</div>
+
+<div class="card" style="text-align:center;">
+
+<a
+href="https://www.instagram.com/bavth_2608"
+target="_blank"
+class="btn">
+
+<i class="fab fa-instagram"></i>
+Instagram
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== CONTACTO ===================== -->
+
+<section id="contacto">
+
+<h2>
+<i class="fas fa-envelope"></i>
+Contacto
+</h2>
+
+<div class="card"
+style="max-width:700px;margin:auto;text-align:center;">
+
+<form
+action="mailto:barradeabogadostizayuca@gmail.com"
+method="post"
+enctype="text/plain"
+style="display:flex;flex-direction:column;gap:15px;">
+
+<input type="text" name="nombre" placeholder="Nombre Completo" required
+style="padding:12px;border-radius:8px;border:1px solid #ccc;">
+
+<input type="email" name="correo" placeholder="Correo Electrónico" required
+style="padding:12px;border-radius:8px;border:1px solid #ccc;">
+
+<textarea name="mensaje" rows="6" placeholder="Mensaje" required
+style="padding:12px;border-radius:8px;border:1px solid #ccc;"></textarea>
+
+<button type="submit" class="btn">
+Enviar Mensaje
+</button>
+
+</form>
+
+<br>
+
+<h3>Correo Institucional</h3>
+<p>barradeabogadostizayuca@gmail.com</p>
+
+</div>
+
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+
+<footer
+style="background:#0B1F3A;color:white;padding:30px 20px;margin-top:60px;">
+
+<div
+style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+
+<div>
+
+<img
+src="https://hitwebcounter.com/counter/counter.php?page=10485809&style=0006&nbdigits=6&type=page&initCount=0">
+
+</div>
+
+<div style="flex:1;text-align:center;">
+
+<h3>
+Barra de Abogados del Valle de Tizayuca, Estado de Hidalgo, A.C.
+</h3>
+
+<p>
+Promoviendo la cultura jurídica, la legalidad y el fortalecimiento del Estado de Derecho.
+</p>
+
+<br>
+
+<p>© 2026 Todos los derechos reservados.</p>
+
+</div>
+
+</div>
+
+<div id="reloj"
+style="text-align:center;margin-top:20px;font-size:1rem;">
+</div>
+
+</footer>
+
+<!-- ===================== SCRIPTS FINALES ===================== -->
+
+<script>
+
+// Loader
+window.addEventListener("load", function(){
+document.body.classList.add("loaded");
+});
+
+// Reloj en vivo
+function actualizarReloj(){
+
+const ahora = new Date();
+
+const fecha = ahora.toLocaleDateString('es-MX',{
+weekday:'long',
+year:'numeric',
+month:'long',
+day:'numeric'
+});
+
+const hora = ahora.toLocaleTimeString('es-MX');
+
+document.getElementById("reloj").innerHTML =
+'🕒 ' + hora + '<br>' + fecha;
+
+}
+
+setInterval(actualizarReloj,1000);
+actualizarReloj();
 
 </script>
 
