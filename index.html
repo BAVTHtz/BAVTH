@@ -215,284 +215,49 @@ gap:20px;
 
 /* ================= TIMELINE ================= */
 
-/* ================= TIMELINE PREMIUM ================= */
-
 .timeline{
-max-width:1200px;
-margin:auto;
 display:flex;
 flex-direction:column;
-gap:45px;
+gap:25px;
 }
 
 .timeline-item{
-
 background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.10);
-transition:.35s;
-border-left:6px solid var(--dorado);
-
-opacity:0;
-transform:translateY(40px);
-
-}
-
-.timeline-item.visible{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-.timeline-item:hover{
-
-transform:translateY(-8px);
-box-shadow:0 18px 40px rgba(0,0,0,.18);
-
-}
-
-.timeline-header{
-
-padding:25px;
-
-background:linear-gradient(135deg,var(--azul),#183b6b);
-
-color:white;
-
-}
-
-.timeline-header h3{
-
-margin-bottom:12px;
-font-size:1.35rem;
-color:var(--dorado);
-
-}
-
-.timeline-header p{
-
-margin:6px 0;
-font-size:1rem;
-line-height:1.6;
-
-}
-
-/*================ GALERIA =================*/
-
-.gallery-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:15px;
-
 padding:20px;
-
-}
-
-.gallery-grid img{
-
-width:100%;
-height:230px;
-object-fit:cover;
-
-border-radius:12px;
-
-cursor:pointer;
-
-transition:.35s;
-
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-
-}
-
-.gallery-grid img:hover{
-
-transform:scale(1.05);
-
-box-shadow:0 15px 25px rgba(0,0,0,.30);
-
-}
-
-/*================ MODAL =================*/
-
-.modal{
-
-display:none;
-
-position:fixed;
-
-z-index:999999;
-
-left:0;
-top:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,.92);
-
-justify-content:center;
-align-items:center;
-flex-direction:column;
-
-padding:30px;
-
-}
-
-.modal.active{
-
-display:flex;
-
-animation:fade .4s;
-
-}
-
-.modal img{
-
-max-width:92%;
-max-height:80vh;
-
 border-radius:15px;
-
-box-shadow:0 20px 45px rgba(0,0,0,.45);
-
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+border-left:5px solid var(--dorado);
 }
 
-.modal span{
-
-position:absolute;
-
-top:25px;
-right:35px;
-
-font-size:45px;
-
-color:white;
-
-cursor:pointer;
-
-transition:.3s;
-
+.timeline-item h3{
+color:var(--azul);
+margin-bottom:10px;
 }
 
-.modal span:hover{
-
-color:var(--dorado);
-
+.timeline-item img{
+width:100%;
+max-height:500px;
+object-fit:cover;
+border-radius:12px;
+margin-top:10px;
 }
 
-.modal h3{
+</style>
+</head>
 
-color:white;
+<body>
 
-margin-top:20px;
+<!-- ================= LOADER ================= -->
 
-font-size:1.2rem;
+<div id="loader">
 
-text-align:center;
+<img src="LOGO_BARRA-removebg-preview.png" class="loader-logo">
 
-max-width:900px;
+<h2>
+Barra de Abogados del Valle de Tizayuca
+</h2>
 
-}
-
-.modal .prev,
-.modal .next{
-
-position:absolute;
-
-top:50%;
-
-transform:translateY(-50%);
-
-font-size:55px;
-
-color:white;
-
-cursor:pointer;
-
-padding:18px;
-
-user-select:none;
-
-transition:.3s;
-
-}
-
-.modal .prev:hover,
-.modal .next:hover{
-
-color:var(--dorado);
-
-}
-
-.modal .prev{
-
-left:25px;
-
-}
-
-.modal .next{
-
-right:25px;
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-}
-
-to{
-
-opacity:1;
-
-}
-
-}
-
-/*================ RESPONSIVE =================*/
-
-@media(max-width:768px){
-
-.timeline-header{
-
-padding:18px;
-
-}
-
-.gallery-grid{
-
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-
-}
-
-.gallery-grid img{
-
-height:170px;
-
-}
-
-.modal img{
-
-max-width:98%;
-
-}
-
-.modal .prev,
-.modal .next{
-
-font-size:40px;
-
-}
-
-}
+</div>
 
 <!-- ================= HEADER ================= -->
 
@@ -888,232 +653,79 @@ Consultar
 </section>
 <!-- ===================== ACTIVIDADES Y CONFERENCIAS ===================== -->
 
-<section id="galeria" class="section">
+<section id="galeria">
 
-<h2 class="section-title">
+<h2>
+<i class="fas fa-images"></i>
 Historial de Actividades y Conferencias
 </h2>
 
 <div class="timeline">
 
-<!-- CRITERIOS RELEVANTES -->
+<div class="timeline-item">
+<h3>21/03/2025</h3>
+<p><strong>Conferencia:</strong> Criterios Relevantes de la Suprema Corte de Justicia de la Nación.</p>
+<p><strong>Impartida por:</strong> Dra. Violeta Sosa Zamora y Lic. Sergio Daniel Martínez.</p>
+<img src="WhatsApp Image 2026-06-22 at 3.16.52 PM.jpeg">
+</div>
 
 <div class="timeline-item">
-
-<div class="timeline-header">
-
-<h3>Criterios Relevantes de la Suprema Corte de Justicia de la Nación</h3>
-
-<p><strong>Fecha:</strong> 21 de marzo de 2025</p>
-
-<p><strong>Ponentes:</strong><br>
-Dra. Violeta Sosa Zamora<br>
-Lic. Sergio Daniel Martínez
-</p>
-
+<h3>05/04/2025</h3>
+<p><strong>Conferencia:</strong> ¿Qué Jueces Queremos? ¿Qué Jueces Necesitamos?</p>
+<p><strong>Impartida por:</strong> Dra. Ana María Ibarra Olguín.</p>
+<img src="WhatsApp Image 2026-06-23 at 11.07.13 AM.jpeg">
 </div>
-
-<div class="gallery-grid">
-
-<img src="WhatsApp Image 2026-06-22 at 3.16.52 PM.jpeg"
-alt="Criterios Relevantes de la Suprema Corte de Justicia de la Nación"
-class="gallery-img">
-
-</div>
-
-</div>
-
-<!-- JUECES -->
 
 <div class="timeline-item">
-
-<div class="timeline-header">
-
-<h3>¿Qué Jueces Queremos? ¿Qué Jueces Necesitamos?</h3>
-
-<p><strong>Ponente:</strong><br>
-Dra. Ana María Ibarra Olguín
-</p>
-
+<h3>05/06/2025</h3>
+<p><strong>Conferencia:</strong> Prescripción Positiva y Negativa en el Estado de Hidalgo.</p>
+<p><strong>Impartida por:</strong> Xóchitl Mirella Piña Camacho.</p>
+<img src="WhatsApp Image 2026-06-23 at 11.10.36 AM.jpeg">
 </div>
-
-<div class="gallery-grid">
-
-<img src="WhatsApp Image 2026-06-23 at 11.07.13 AM.jpeg"
-alt="¿Qué Jueces Queremos?"
-class="gallery-img">
-
-</div>
-
-</div>
-
-<!-- RAN -->
 
 <div class="timeline-item">
-
-<div class="timeline-header">
-
-<h3>Conferencia impartida por la Barra de Abogados del Valle de Tizayuca al Registro Agrario Nacional Hidalgo</h3>
-
+<h3>23/06/2025</h3>
+<p><strong>Actividad Institucional:</strong> Conferencia impartida por la BAVTH en RAN Hidalgo.</p>
+<img src="517653142_122255781176140669_2056361342759283861_n.jpg">
 </div>
-
-<div class="gallery-grid">
-
-<img src="517653142_122255781176140669_2056361342759283861_n.jpg"
-alt="Conferencia RAN Hidalgo"
-class="gallery-img">
-
-</div>
-
-</div>
-
-<!-- PENSION -->
 
 <div class="timeline-item">
-
-<div class="timeline-header">
-
-<h3>Pensión Alimenticia en el Estado de Hidalgo</h3>
-
-<p><strong>Fecha:</strong> 27 de junio de 2025</p>
-
-<p><strong>Ponente:</strong><br>
-
-Lic. Leticia Pastor Rafael
-
-</p>
-
+<h3>27/06/2025</h3>
+<p><strong>Conferencia:</strong> Pensión Alimenticia en el Estado de Hidalgo.</p>
+<p><strong>Impartida por:</strong> Lic. Leticia Pastor Rafael.</p>
+<img src="WhatsApp Image 2026-06-15 at 3.22.43 PM (1).jpeg">
 </div>
-
-<div class="gallery-grid">
-
-<img src="WhatsApp Image 2026-06-15 at 3.22.43 PM (1).jpeg"
-alt="Pensión Alimenticia"
-class="gallery-img">
-
-</div>
-
-</div>
-
-<!-- GENERO -->
 
 <div class="timeline-item">
-
-<div class="timeline-header">
-
-<h3>Perspectiva de Género e Interseccionalidad</h3>
-
-<p><strong>Ponentes:</strong><br>
-
-Dra. María Guadalupe Gómez Chavarín<br>
-
-Dra. Violeta Sosa Zamora
-
-</p>
-
+<h3>09/03/2026</h3>
+<p><strong>Conferencia:</strong> Perspectiva de Género e Interseccionalidad.</p>
+<p><strong>Impartida por:</strong> Dra. María Guadalupe Gómez Chavarín y Dra. Violeta Sosa Zamora.</p>
+<img src="650047320_122166650984947773_557821829667716147_n.jpg">
 </div>
-
-<div class="gallery-grid">
-
-<img src="650047320_122166650984947773_557821829667716147_n.jpg"
-alt="Perspectiva de Género"
-class="gallery-img">
-
-</div>
-
-</div>
-
-<!-- REFORMA -->
 
 <div class="timeline-item">
-
-<div class="timeline-header">
-
-<h3>Retos de la Abogacía ante la Reforma Judicial</h3>
-
-<p><strong>Fecha:</strong> 15 de abril de 2026</p>
-
-<p><strong>Ponente:</strong>
-
-Dr. Ciro Juárez González
-
-</p>
-
+<h3>15/04/2026</h3>
+<p><strong>Conferencia:</strong> Retos de la Abogacía ante la Reforma Judicial.</p>
+<p><strong>Impartida por:</strong> Dr. Ciro Juárez González.</p>
+<img src="WhatsApp Image 2026-06-23 at 11.19.45 AM.jpeg">
 </div>
-
-<div class="gallery-grid">
-
-<img src="WhatsApp Image 2026-06-15 at 3.18.11 PM.jpeg"
-alt="Retos de la Abogacía"
-
-class="gallery-img">
-
-<img src="WhatsApp Image 2026-06-23 at 11.19.45 AM.jpeg"
-alt="Retos de la Abogacía"
-
-class="gallery-img">
-
-</div>
-
-</div>
-
-<!-- PRIMERA REUNION -->
 
 <div class="timeline-item">
-
-<div class="timeline-header">
-
-<h3>Primera Reunión Institucional</h3>
-
-<p>
-
-Barra de Abogados del Valle de Tizayuca con el H. Ayuntamiento del Municipio de Tizayuca, Hidalgo.
-
-</p>
-
+<h3>2026</h3>
+<p><strong>Primera Reunión Institucional</strong> con el H. Ayuntamiento de Tizayuca, Hidalgo.</p>
+<img src="WhatsApp Image 2026-06-23 at 10.53.46 AM.jpeg">
 </div>
-
-<div class="gallery-grid">
-
-<img src="WhatsApp Image 2026-06-23 at 10.53.46 AM.jpeg"
-alt="Primera Reunión"
-
-class="gallery-img">
-
-</div>
-
-</div>
-
-<!-- SEGUNDA REUNION -->
 
 <div class="timeline-item">
-
-<div class="timeline-header">
-
-<h3>Segunda Reunión Institucional</h3>
-
-<p>
-
-Barra de Abogados del Valle de Tizayuca con el H. Ayuntamiento del Municipio de Tizayuca, Hidalgo.
-
-</p>
-
-</div>
-
-<div class="gallery-grid">
-
-<img src="WhatsApp Image 2026-06-23 at 10.55.14 AM.jpeg"
-alt="Segunda Reunión"
-
-class="gallery-img">
-
-</div>
-
+<h3>2026</h3>
+<p><strong>Segunda Reunión Institucional</strong> con el H. Ayuntamiento de Tizayuca, Hidalgo.</p>
+<img src="WhatsApp Image 2026-06-23 at 10.55.14 AM.jpeg">
 </div>
 
 </div>
 
 </section>
+
 <!-- ===================== REDES SOCIALES ===================== -->
 
 <section>
